@@ -1,4 +1,4 @@
-# catwithcode.github.io
+# catwithcode.moe
 This is my Blog where I post my daily discoveries and random thoughts.
 
-[catwithcode.github.io/](/)
+[catwithcode.moe/](/)
