@@ -1,2 +1,4 @@
-# catwithcode.moe.mirror
-This is the Source Code of my Website
+# catwithcode.github.io
+This is my Blog where I post my daily discoveries and random thoughts.
+
+[catwithcode.github.io/](/)
