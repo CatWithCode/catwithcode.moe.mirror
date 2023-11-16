@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/Assets/GetHead.js"></script>
+    <title>CatWithCode - Everything about the Fairphone 5</title>
+  </head>
+  <body align="left">
+    <script src="/Assets/GetTopBar.js"></script>
+    
+    <h1>Everything about the Fairphone 5:</h1>
+    <h3>This time I will do things differently on my blog; I will just document everything useful I find out or do with the Fairphone 5 in one place without a goal in mind, as long as I am using it. Everything from modding to installing UbuntuTouch will be documented here. I use Linux for everything btw.:</h3>
+    <br>
+    <br>
+    <hr>
+    <h2><u>de-Google of the Stock-Rom</u>:</h2>
+    <h3>At the time of writing, there are more or less no CustomRoms. They are all under development. This meant that I had to de-google the stock rom as much as possible without breaking things. After a lot of testing, I found a config that keeps everything working, including updates, without modifying the Stock-Rom at all, while cleaning it up as much as possible without root (The stock rom is closed source, which means cleaning everything up and making sure your done is impossible). I used Universal Android Debloater and some other tutorials on the internet to create a script. It can be found in my "Fairphone5-Tweaks" repository:</h3>
+    <a href="https://github.com/CatWithCode/Fairphone5-Tweaks">https://github.com/CatWithCode/Fairphone5-Tweaks</a>
+    <h3>You need to replace almost every app on your phone. I recommend the "Simple" apps from F-Droid. Open source, offline only and they just work. The script will also install any APK it finds in the Assets/Basic/ subfolders. Make sure the apps are the correct architecture! I recommend installing them all on the phone itself with the F-Droid and Aurora App and then dumping them with an extractor. Then you can create your own apk folder for easy reinstall after a reset.</h3>
+    <h1><u><b>IMPORTANT:</b></u></h1>
+    <h3><u><b>>>> READ THE Aurora-Store FIX-SECTION!</b></u></h3>
+    <h3><u><b>>>> "Google Play Services" and "Google Services Framework" are only disabled! You need them to update the stock rom via OTA! Enable both and you can update again! A temporary uninstall would soft-brick this functionality! You could flash each OTA update (could not find any offical zip's) with the recovery, but this could lead to bricking and slot desynchronisation!</b></u></h3>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <h2><u>Fixing wrong architecture in the Aurora store</u>:</h2>
+    <h3>This was so annoying to figure out. Aurora-Store NORMALLY downloads the right architecture of Apps for the phone... NORMALLY. It had the correct default phone architecture selected in the settings, but many apps would install but not work. Fixing this is as simple as going into the Aurora Store device settings and selecting "Google Pixel 7a" with "arm64-v8a". Examples of apps with this problem were: Discord, Komoot, Maps, SteamLink, Spotify, ... .</h3>
+    <a href="https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736">https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736</a>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <h2><u>Unlocking the Phone / Reinstalling the Stock Rom</u>:</h2>
+    <h3>For some reason, you have to unlock the phone's bootloader and critical partitions to reinstall the stock ROM. An interesting part of doing this was that I never encountered any "warranty void" stuff on the way, neither on the phone nor in the OFFICIAL guides. They just mention that you need to flash the phone back to stock (and preferably lock the bootloader again) if you want to claim warranty. I am no expert, but as far as I can see, that seems to be the way they do it. Voiding the warranty because of software modifications is illegal anyway as far as I know, but still very cool that they are so open about it (DO NOT QUOTE ME OR USE THIS AS A SOURCE! THIS IS JUST UNCONFIRMED STUFF I PUT TOGETHER MYSELF! IF YOU SCREW UP, YOUR LOSS! I AM NOT A LAWYER AND THIS IS NOT LEGAL ADVICE! THIS IS JUST ME RAMBLING!!!)</h3>
+    <a href="https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader">https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader</a>
+    <h3>One VERY annoying thing is that you need an unlock code from them. And from a little bit of testing I saw that your code is checked by a server. This means that if you create 3 unlock codes, only the last one will work. This is one of the only really bad points on the phone for me at the moment. If the server or the company ever shuts down the bootloader will probably be locked forever and the software will become obsolete.</h3>
+    <a href="https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone">https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone</a>
+    <a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a>
+    <br>
+    <br>
+    <br>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3><u>Unlocking</u>:</h3>
+    <h3>
+      <ol>
+        <li>Settings → About phone → scroll down to IMEI (SIM slot 1)</li>
+        <li>Settings → About phone → Model & Hardware → Serial number</li>
+        <li>Get your unlock code: <a href="https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone">https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone</a></li>
+        <li>Settings → About phone → 5x Build number</li>
+        <li>Settings → System (→ Advanced) → Developer options</li>
+        <li>OEM unlocking</li>
+        <li>USE THE UNLOCK CODE (Internet connection required)</li>
+        <li>adb reboot bootloader</li>
+        <li>fastboot flashing unlock</li>
+        <li>YES</li>
+        <li>Settings → About phone → 5x Build number</li>
+        <li>adb reboot bootloader</li>
+        <li>fastboot flashing unlock_critical</li>
+        <li>YES</li>        
+      </ol>
+    </h3>
+    <h3><u>Flashing Stock Firmware</u>:</h3>
+    <h3>
+      <ol>
+        <li>adb reboot bootloader</li>
+        <li>Extracting the latest Firmware Archive: <a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a></li>
+        <li>Opening a Terminal in the folder and executing <u><i>./flash_fp5_factory.sh</i></u> and following the prompts.</li>
+      </ol>
+    </h3>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <h2><u>Rooting the phone</u>:</h2>
+    <h3>As far as I have seen it is recommended on modern Android that you only BOOT a modified boot image (NOT FLASH) and then use Magisk in Android to directly root the installed boot loader.</h3>
+    <a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a>
+    <br>
+    <br>
+    <br>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3>
+      <ol>
+        <li>Getting the offical Firmware: <a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a></li>
+        <li>Extracting the boot.img</li>
+        <li>Installing the Magisk-App on the Phone: <a href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a></li>
+        <li>Pathing the boot.img with he Magisk-App</li>
+        <li>Copy modded boot.img to PC</li>
+        <li>adb reboot bootloader</li>
+        <li>adb boot modded_boot.img</li>
+        <li>Opening Magisk-App and <u>NOT</u> pressing Yes at the further modifications needed popup</li>
+        <li>Select Install Magisk and choose direct install (after installing an OTA update, select the OTA option before the next reboot!)</li>
+        <li>Reboot</li>
+        <li>Opening Magisk-App and pressing Yes at the further modifications needed popup</li>
+        <li>Reboot!</li>
+      </ol>
+    </h3>
+    <br>
+    <hr>
+    <!-- PLACEHOLDER -->
+    <!--
+    <br>
+    <br>
+    <hr>
+    <h2><u>PLACEHOLDER</u>:</h2>
+    <h3>PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER </h3>
+    <h3>
+      <ul>
+        <li>PLACEHOLDER</li>
+        <li>PLACEHOLDER</li>
+      </ul>
+    </h3>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3>
+      <ol>
+        <li>PLACEHOLDER</li>
+        <li>PLACEHOLDER</li>
+      </ol>
+    </h3>
+    <p><u><i>PLACEHOLDER</i></u></p>
+    <a href="PLACEHOLDER">PLACEHOLDER</a>
+    <hr>
+    -->
+    <!-- PLACEHOLDER -->
+    <br>
+    <br>
+    <b>Sources:</b>
+    <ul>
+      <li><a href="https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736">https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736</a></li>
+      <li><a href="https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone">https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone</a></li>
+      <li><a href="https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader">https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader</a></li>
+      <li><a href="https://github.com/CatWithCode/Fairphone5-Tweaks">https://github.com/CatWithCode/Fairphone5-Tweaks</a></li>
+      <li><a href="https://www.fairphone.com/en/legal/">https://www.fairphone.com/en/legal/</a></li>
+      <li><a href="https://ubports.com/fr/">https://ubports.com/fr/</a></li>
+      <li><a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a></li>
+      <li><a href="https://download.lineageos.org/devices/FP5/builds">https://download.lineageos.org/devices/FP5/builds</a></li>
+      <li><a href="https://wiki.postmarketos.org/wiki/Fairphone_5_(fairphone-fp5)">https://wiki.postmarketos.org/wiki/Fairphone_5_(fairphone-fp5)</a></li>
+      <li><a href="https://shop.fairphone.com/de/shop">https://shop.fairphone.com/de/shop</a></li>
+      <li><a href="https://github.com/waydroid/waydroid/issues/226">https://github.com/waydroid/waydroid/issues/226</a></li>
+      <li><a href="https://forum.fairphone.com/t/operating-systems-for-fairphones/11425">https://forum.fairphone.com/t/operating-systems-for-fairphones/11425</a></li>
+      <li><a href="https://forums.ubports.com/">https://forums.ubports.com/</a></li>
+      <li><a href="https://forums.ubports.com/search?in=titlesposts&term=Fairphone+5&matchWords=all&by=&categories=&searchChildren=false&hasTags=&replies=&repliesFilter=atleast&timeFilter=newer&timeRange=&sortBy=topic.lastposttime&sortDirection=desc&showAs=posts">https://forums.ubports.com/search?in=titlesposts&term=Fairphone+5&matchWords=all&by=&categories=&searchChildren=false&hasTags=&replies=&repliesFilter=atleast&timeFilter=newer&timeRange=&sortBy=topic.lastposttime&sortDirection=desc&showAs=posts</a></li>
+      <li><a href="https://youtu.be/sIO36VRB-dw">https://youtu.be/sIO36VRB-dw</a></li>
+      <li><a href="https://github.com/fairphone/android_device_fairphone_FP5">https://github.com/fairphone/android_device_fairphone_FP5</a></li>
+      <li><a href="https://xdaforums.com/f/fairphone-5.12791/">https://xdaforums.com/f/fairphone-5.12791/</a></li>
+      <li><a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a></li>
+      <li><a href="https://code.fairphone.com/projects/fairphone-5/kernel.html">https://code.fairphone.com/projects/fairphone-5/kernel.html</a></li>
+      <li><a href="https://github.com/0x192/universal-android-debloater">https://github.com/0x192/universal-android-debloater</a></li>
+      <li><a href="https://gist.github.com/androidneha/896ec6b08137ef75a95341550b9c60fc">https://gist.github.com/androidneha/896ec6b08137ef75a95341550b9c60fc</a></li>
+      <li><a href="https://github.com/0x192/universal-android-debloater/wiki/FAQ">https://github.com/0x192/universal-android-debloater/wiki/FAQ</a></li>
+      <!--
+      <li><a href="">Link</a></li>
+      -->
+    </ul>
+    <h5>0000.00.00 - 00:00</h5>
+  </body>
+</html>
