@@ -8,12 +8,41 @@
     <script src="/Assets/GetTopBar.js"></script>
     
     <h1>Everything about Fairphone 5 modding:</h1>
-    <h3>This time I will do things differently on my blog; I will just document everything useful I find out or do with the Fairphone 5 in one place without a goal in mind, as long as I am using it. Everything from modding to installing UbuntuTouch will be documented here. I use Linux for everything btw.:</h3>
+    <h3>This time I will do things differently on my blog; I will just document everything useful I find out or do with the Fairphone 5 in one place without a goal in mind, as long as I am using it. Everything from modding to installing UbuntuTouch will be documented here:</h3>
+    <h3>A few important things:</h3>
+    <h3>
+      <ul>
+        <li>I use Linux for everything.</li>
+        <li>I don't use MicroG and all my scripts don't install it, and if it's pre-installed I uninstall it with the scripts for better battery life. If you want to keep it you can just comment out all the MicroG lines in the scripts.</li>
+        <li>Any changes that involve root, other OS installations, custom roms or UbuntuTouch require AT LEAST an unlocked bootloader and unlock_critical, and often Magisk installed on the boot.img!</li>
+        <li>Do <b><u>!!!NOT!!!</u></b> relock the bootloader or relock unlock_critical! And if you REALLY REALLY R-E-A-L-L-Y need to, flash the stock firmware with the OFFICIAL tool first!</li>
+      </ul>
+    </h3>
+    <br>
+    <hr>
+    <h2><u>Installing /e/OS</u>:</h2>
+    <h3>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you.:</h3>
+    <a href="https://doc.e.foundation/devices/FP5/install">https://doc.e.foundation/devices/FP5/install</a>
+    <br>
+    <a href="https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/">https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/</a>
+    <br>
+    <a href="https://github.com/CatWithCode/Fairphone5-Tweaks">https://github.com/CatWithCode/Fairphone5-Tweaks</a>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3>
+      <ol>
+        <li>Download the official Install Archive from there Website: <a href="https://doc.e.foundation/devices/FP5/install">https://doc.e.foundation/devices/FP5/install</a></li>
+        <li>Reboot your phone into the bootloader <u><i>adb reboot bootloader</i></u></li>
+        <li>Extract the archive, open a bash in it, make the installer executable and run it: <u><i>chmod +x flash_FP5_factory.sh && ./flash_FP5_factory.sh
+        </i></u></li>
+        <li>Once everything is done and the phone has booted, you can use my script to clean up the OS to have a clean plate to work from (<u><b>!!!Important!!! Take all possible permissions from BlissLauncher. With permissions, BlissLauncher will crash!</b></u>) and/or root it (do not reuse your old modded boot.img! The /e/OS-Boot.img is different! You need to redo the rooting part to have a usable rooted boot.img to boot from for full Magisk installation!).</li>
+      </ol>
+    </h3>
+    <hr>
     <br>
     <br>
     <hr>
     <h2><u>de-Google of the Stock-Rom</u>:</h2>
-    <h3>At the time of writing, there are more or less no CustomRoms. They are all under development. This meant that I had to de-google the stock rom as much as possible without breaking things. After a lot of testing, I found a config that keeps everything working, including updates, without modifying the Stock-Rom at all, while cleaning it up as much as possible without root (The stock rom is closed source, which means cleaning everything up and making sure your done is impossible). I used Universal Android Debloater and some other tutorials on the internet to create a script. It can be found in my "Fairphone5-Tweaks" repository:</h3>
+    <h3>At the time of writing, there are more or less no CustomRoms. They are all under development. This meant that I had to de-google the stock rom as much as possible without breaking things. After a lot of testing, I found a config that keeps everything working, including updates, without modifying the Stock-Rom at all, while cleaning it up as much as possible without root (The stock rom is closed source, which means cleaning everything up and making sure your done is impossible). I used Universal Android Debloater and some other tutorials on the internet to create a script. You can find it in my "Fairphone5-Tweaks" repository:</h3>
     <a href="https://github.com/CatWithCode/Fairphone5-Tweaks">https://github.com/CatWithCode/Fairphone5-Tweaks</a>
     <h3>You need to replace almost every app on your phone. I recommend the "Simple" apps from F-Droid. Open source, offline only and they just work. The script will also install any APK it finds in the Assets/Basic/ subfolders. Make sure the apps are the correct architecture! I recommend installing them all on the phone itself with the F-Droid and Aurora App and then dumping them with an extractor. Then you can create your own apk folder for easy reinstall after a reset.</h3>
     <h1><u><b>IMPORTANT:</b></u></h1>
@@ -24,8 +53,36 @@
     <br>
     <hr>
     <h2><u>Fixing wrong architecture in the Aurora-Store</u>:</h2>
-    <h3>This was so annoying to figure out. Aurora-Store NORMALLY downloads the right architecture of Apps for the phone... NORMALLY. It had the correct default phone architecture selected in the settings, but many apps would install but not work. Fixing this is as simple as going into the Aurora Store device settings and selecting "Google Pixel 7a" with "arm64-v8a". Examples of apps with this problem were: Discord, Komoot, Maps, SteamLink, Spotify, ... .</h3>
+    <h3>This was so annoying to figure out. Aurora-Store NORMALLY downloads the right architecture of Apps for the phone... NORMALLY. It had the correct default phone architecture selected in the settings, but many apps would install but not work. Fixing this is as simple as going into the Aurora Store device settings and selecting "Google Pixel 7a" with "arm64-v8a". Examples of apps with this problem were: Discord, Komoot, Maps, SteamLink, Spotify, ... . It is also good to know that a lot of app's today are multi apk, means: Many of them cannot be easily backed up and restored.
+    </h3>
     <a href="https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736">https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736</a>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <h2><u>Rooting the phone (Any Stock-Rom/Custom-Rom</u>:</h2>
+    <h3>As far as I have seen it is recommended on modern Android that you only BOOT a modified boot image (NOT FLASH) and then use Magisk in Android to directly root the installed boot loader.</h3>
+    <a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a>
+    <br>
+    <br>
+    <br>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3>
+      <ol>
+        <li>Getting the offical Firmware: <a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a></li>
+        <li>Extracting the boot.img</li>
+        <li>Installing the Magisk-App on the Phone: <a href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a></li>
+        <li>Pathing the boot.img with the Magisk-App</li>
+        <li>Copy modded boot.img to PC</li>
+        <li>adb reboot bootloader</li>
+        <li>adb boot modded_boot.img</li>
+        <li>Opening Magisk-App and <u>NOT</u> pressing Yes at the further modifications needed popup</li>
+        <li>Select Install Magisk and choose direct install (after installing an OTA update, select the OTA option before the next reboot!)</li>
+        <li>Reboot</li>
+        <li>Opening Magisk-App and pressing Yes at the further modifications needed popup</li>
+        <li>Reboot</li>
+      </ol>
+    </h3>
     <hr>
     <br>
     <br>
@@ -68,34 +125,6 @@
       </ol>
     </h3>
     <hr>
-    <br>
-    <br>
-    <hr>
-    <h2><u>Rooting the phone</u>:</h2>
-    <h3>As far as I have seen it is recommended on modern Android that you only BOOT a modified boot image (NOT FLASH) and then use Magisk in Android to directly root the installed boot loader.</h3>
-    <a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a>
-    <br>
-    <br>
-    <br>
-    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
-    <h3>
-      <ol>
-        <li>Getting the offical Firmware: <a href="https://support.fairphone.com/hc/en-us/articles/18896094650513">https://support.fairphone.com/hc/en-us/articles/18896094650513</a></li>
-        <li>Extracting the boot.img</li>
-        <li>Installing the Magisk-App on the Phone: <a href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a></li>
-        <li>Pathing the boot.img with the Magisk-App</li>
-        <li>Copy modded boot.img to PC</li>
-        <li>adb reboot bootloader</li>
-        <li>adb boot modded_boot.img</li>
-        <li>Opening Magisk-App and <u>NOT</u> pressing Yes at the further modifications needed popup</li>
-        <li>Select Install Magisk and choose direct install (after installing an OTA update, select the OTA option before the next reboot!)</li>
-        <li>Reboot</li>
-        <li>Opening Magisk-App and pressing Yes at the further modifications needed popup</li>
-        <li>Reboot</li>
-      </ol>
-    </h3>
-    <br>
-    <hr>
     <!-- PLACEHOLDER -->
     <!--
     <br>
@@ -103,6 +132,7 @@
     <hr>
     <h2><u>PLACEHOLDER</u>:</h2>
     <h3>PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER </h3>
+    <a href="PLACEHOLDER">PLACEHOLDER</a>
     <h3>
       <ul>
         <li>PLACEHOLDER</li>
@@ -117,7 +147,6 @@
       </ol>
     </h3>
     <p><u><i>PLACEHOLDER</i></u></p>
-    <a href="PLACEHOLDER">PLACEHOLDER</a>
     <hr>
     -->
     <!-- PLACEHOLDER -->
@@ -147,10 +176,16 @@
       <li><a href="https://github.com/0x192/universal-android-debloater">https://github.com/0x192/universal-android-debloater</a></li>
       <li><a href="https://gist.github.com/androidneha/896ec6b08137ef75a95341550b9c60fc">https://gist.github.com/androidneha/896ec6b08137ef75a95341550b9c60fc</a></li>
       <li><a href="https://github.com/0x192/universal-android-debloater/wiki/FAQ">https://github.com/0x192/universal-android-debloater/wiki/FAQ</a></li>
+      <li><a href="https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/">https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/</a></li>
+      <li><a href="https://doc.e.foundation/devices/FP5/install">https://doc.e.foundation/devices/FP5/install</a></li>
+      <li><a href="https://forum.fairphone.com/t/e-os-manual-installation/100321/6">https://forum.fairphone.com/t/e-os-manual-installation/100321/6</a></li>
+      <li><a href="https://community.e.foundation/t/week-46-2023-development-and-testing-updates/53363/23?u=anotherelk">https://community.e.foundation/t/week-46-2023-development-and-testing-updates/53363/23?u=anotherelk</a></li>
+      <li><a href="https://doc.e.foundation/devices">https://doc.e.foundation/devices</a></li>
+      <li><a href="https://doc.e.foundation/devices/FP5">https://doc.e.foundation/devices/FP5</a></li>      
       <!--
       <li><a href="">Link</a></li>
       -->
     </ul>
-    <h5>2023.11.16 - 19:16</h5>
+    <h5>2023.11.20 - 23:00</h5>
   </body>
 </html>
