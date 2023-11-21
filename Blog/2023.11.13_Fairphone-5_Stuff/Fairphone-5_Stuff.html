@@ -20,8 +20,23 @@
     </h3>
     <br>
     <hr>
+    <h2><u>Fixed screen refresh rate (sometimes)</u>:</h2>
+    <h3>Not much to it. Just force a high refreshrate (as far as the normal system will allow). This will fix wrong refreshrates on other roms like /e/OS. These ADB commands are also in my scripts:</h3>
+    <a href="https://source.android.com/docs/core/graphics/multiple-refresh-rate">https://source.android.com/docs/core/graphics/multiple-refresh-rate</a>
+    <h3><u>Command's used (ALWAYS READ THE OFFICIAL DOCUMENTATION! THIS IS ONLY FOR ARCHIVING PURPOSES!)</u>:</h3>
+    <h3>
+    <h3>
+      <ul>
+        <li><u><i>adb shell settings put system min_refresh_rate 90</i></u></li>
+        <li><u><i>adb shell settings put system peak_refresh_rate 90</i></u></li>
+      </ul>
+    </h3>
+    <hr>
+    <br>
+    <br>
+    <hr>
     <h2><u>Installing /e/OS</u>:</h2>
-    <h3>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you.:</h3>
+    <h3>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you:</h3>
     <a href="https://doc.e.foundation/devices/FP5/install">https://doc.e.foundation/devices/FP5/install</a>
     <br>
     <a href="https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/">https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/</a>
@@ -53,7 +68,7 @@
     <br>
     <hr>
     <h2><u>Fixing wrong architecture in the Aurora-Store</u>:</h2>
-    <h3>This was so annoying to figure out. Aurora-Store NORMALLY downloads the right architecture of Apps for the phone... NORMALLY. It had the correct default phone architecture selected in the settings, but many apps would install but not work. Fixing this is as simple as going into the Aurora Store device settings and selecting "Google Pixel 7a" with "arm64-v8a". Examples of apps with this problem were: Discord, Komoot, Maps, SteamLink, Spotify, ... . It is also good to know that a lot of app's today are multi apk, means: Many of them cannot be easily backed up and restored.
+    <h3>This was so annoying to figure out. Aurora-Store NORMALLY downloads the right architecture of Apps for the phone... NORMALLY. It had the correct default phone architecture selected in the settings, but many apps would install but not work. Fixing this is as simple as going into the Aurora Store device settings and selecting "Google Pixel 7a" with "arm64-v8a". Examples of apps with this problem were: Discord, Komoot, Maps, SteamLink, Spotify, ... . It is also good to know that a lot of app's today are multi apk, means: Many of them cannot be easily backed up and restored:
     </h3>
     <a href="https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736">https://forum.fairphone.com/t/a-lot-of-apps-not-working-with-logs-discord-komoot-maps-steamlink-and-spotify/102736</a>
     <hr>
@@ -61,7 +76,7 @@
     <br>
     <hr>
     <h2><u>Rooting the phone (Any Stock-Rom/Custom-Rom</u>:</h2>
-    <h3>As far as I have seen it is recommended on modern Android that you only BOOT a modified boot image (NOT FLASH) and then use Magisk in Android to directly root the installed boot loader.</h3>
+    <h3>As far as I have seen it is recommended on modern Android that you only BOOT a modified boot image (NOT FLASH) and then use Magisk in Android to directly root the installed boot loader:</h3>
     <a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a>
     <br>
     <br>
@@ -88,7 +103,7 @@
     <br>
     <hr>
     <h2><u>Unlocking the Phone / Reinstalling the Stock Rom</u>:</h2>
-    <h3>For some reason, you have to unlock the phone's bootloader and critical partitions to reinstall the stock ROM. An interesting part of doing this was that I never encountered any "warranty void" stuff on the way, neither on the phone nor in the OFFICIAL guides. They just mention that you need to flash the phone back to stock (and preferably lock the bootloader again) if you want to claim warranty. I am no expert, but as far as I can see, that seems to be the way they do it. Voiding the warranty because of software modifications is illegal anyway as far as I know, but still very cool that they are so open about it (DO NOT QUOTE ME OR USE THIS AS A SOURCE! THIS IS JUST UNCONFIRMED STUFF I PUT TOGETHER MYSELF! IF YOU SCREW UP, YOUR LOSS! I AM NOT A LAWYER AND THIS IS NOT LEGAL ADVICE! THIS IS JUST ME RAMBLING!!!)</h3>
+    <h3>For some reason, you have to unlock the phone's bootloader and critical partitions to reinstall the stock ROM. An interesting part of doing this was that I never encountered any "warranty void" stuff on the way, neither on the phone nor in the OFFICIAL guides. They just mention that you need to flash the phone back to stock (and preferably lock the bootloader again) if you want to claim warranty. I am no expert, but as far as I can see, that seems to be the way they do it. Voiding the warranty because of software modifications is illegal anyway as far as I know, but still very cool that they are so open about it (DO NOT QUOTE ME OR USE THIS AS A SOURCE! THIS IS JUST UNCONFIRMED STUFF I PUT TOGETHER MYSELF! IF YOU SCREW UP, YOUR LOSS! I AM NOT A LAWYER AND THIS IS NOT LEGAL ADVICE! THIS IS JUST ME RAMBLING!!!):</h3>
     <a href="https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader">https://support.fairphone.com/hc/en-us/articles/10492476238865-Manage-the-Bootloader</a>
     <h3>One VERY annoying thing is that you need an unlock code from them. And from a little bit of testing I saw that your code is checked by a server. This means that if you create 3 unlock codes, only the last one will work. This is one of the only really bad points on the phone for me at the moment. If the server or the company ever shuts down the bootloader will probably be locked forever and the software will become obsolete.</h3>
     <a href="https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone">https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone</a>
@@ -127,11 +142,9 @@
     <hr>
     <!-- PLACEHOLDER -->
     <!--
-    <br>
-    <br>
     <hr>
     <h2><u>PLACEHOLDER</u>:</h2>
-    <h3>PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER </h3>
+    <h3>PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER:</h3>
     <a href="PLACEHOLDER">PLACEHOLDER</a>
     <h3>
       <ul>
@@ -148,6 +161,8 @@
     </h3>
     <p><u><i>PLACEHOLDER</i></u></p>
     <hr>
+    <br>
+    <br>
     -->
     <!-- PLACEHOLDER -->
     <br>
@@ -181,7 +196,8 @@
       <li><a href="https://forum.fairphone.com/t/e-os-manual-installation/100321/6">https://forum.fairphone.com/t/e-os-manual-installation/100321/6</a></li>
       <li><a href="https://community.e.foundation/t/week-46-2023-development-and-testing-updates/53363/23?u=anotherelk">https://community.e.foundation/t/week-46-2023-development-and-testing-updates/53363/23?u=anotherelk</a></li>
       <li><a href="https://doc.e.foundation/devices">https://doc.e.foundation/devices</a></li>
-      <li><a href="https://doc.e.foundation/devices/FP5">https://doc.e.foundation/devices/FP5</a></li>      
+      <li><a href="https://doc.e.foundation/devices/FP5">https://doc.e.foundation/devices/FP5</a></li>
+      <li><a href="https://source.android.com/docs/core/graphics/multiple-refresh-rate">https://source.android.com/docs/core/graphics/multiple-refresh-rate</a></li>
       <!--
       <li><a href="">Link</a></li>
       -->
