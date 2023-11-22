@@ -8,21 +8,21 @@
     <script src="/Assets/GetTopBar.js"></script>
     
     <h1>Unihertz Titan, GSI, Android 13 and UFS</h1>
-    <h3>First of all; What is UFS and what does it mean for me. The first Titans have EMMC-Memory (The phone storage). UFS is a faster type of memory and in pretty much every model after the first year of production as far as the community is concernt. UFS is faster and generally better BUT the way how it interacts with Modding stuff and the firmware is drastic... . That's why you need to be very careful and do a lot of research before you try anything or you will end up with a seemingly HardBricked phone. At the moment the TWRP ONLY really works on EMMC and the start of unlocking and Modding is different. GSIs, after everything is prepared and installed, are used and flashed the same way. But the SP-Flash-Tool needs different files for different types of memory and most importantly, you cannot install any ZIPs with UFS Titans at the moment. This can, but most likely will not, change in the future. You will probably will lose your warranty.</h3>    
-    <h3>I did a ton of research to install a custom GSI on my Unihertz Titan. As you might expect for such a small production / slowly selling phone, the support and amount of users are relatively small. One other thing is that Unihertz dose; They don't release their Kernel Code, which they're obligated to do when they release a custom Version of android (Every Phone every has a modified version of stock android on it.). This documentation expects from you that you know at least the basics regarding Android Modding and the Linux Terminal / Windows CMD! Do your research! This documentation uses the Unihertz Titan Stock UFS Android 10 as Base and with the last Update at that point (07.08.2022 - Android 10.0). In this documentation I install a vanilla gsi (clean from anything, that means fully FOSS and AOSP). There are only links to the Posts (It's important that you read what the files do / are needed for). We will use AOSP 12.1 v414 by phhusson (system-squeak-arm64-ab-vanilla.img) in this documentation. The firmware files are ONLY for the EEA-UFS-Titans! Some people on the discord say it also can be flashed on the TEE-UFS-Titans but I can not confirm that. The same for the patched Boot.img's. I only have an EEA-UFS-Titan. If you have a TEE, proceed with caution! This is only testet on EEA-Titans until now!</h3>
-    <h3>Anyway. I hope you find this documentation of my time intensive research useful! As always: IF YOU TRY ANYTHING WRITTEN ON THIS BLOG YOU ARE DOING IT AT YOUR OWN RISK! IT SHOULD BE OBVIOUS! DON'T COME TO ME CRYING IF SOMETHING WENT WRONG. THAT'S YOUR PROBLEM AND ONLY YOURS!</h3>
-    <h3>First check what type of flash you have. As the title of this entry says this is only for UFS-Flash Titans. If you have an EMMC Titan then you need to look how to do it for yourself!!! Lets Check:</h3>
-    <h3>You can use Device Info HW (<a href="https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=de&gl=US">https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=de&gl=US</a> - See Image below) or download Androbench and check your Sequential Read Speed. Above 450 mbps is UFS, below EMMC (<a href="https://unihertz-titan.neocities.org/">https://unihertz-titan.neocities.org/</a>).</h3>
+    <p>First of all; What is UFS and what does it mean for me. The first Titans have EMMC-Memory (The phone storage). UFS is a faster type of memory and in pretty much every model after the first year of production as far as the community is concernt. UFS is faster and generally better BUT the way how it interacts with Modding stuff and the firmware is drastic... . That's why you need to be very careful and do a lot of research before you try anything or you will end up with a seemingly HardBricked phone. At the moment the TWRP ONLY really works on EMMC and the start of unlocking and Modding is different. GSIs, after everything is prepared and installed, are used and flashed the same way. But the SP-Flash-Tool needs different files for different types of memory and most importantly, you cannot install any ZIPs with UFS Titans at the moment. This can, but most likely will not, change in the future. You will probably will lose your warranty.</p>    
+    <p>I did a ton of research to install a custom GSI on my Unihertz Titan. As you might expect for such a small production / slowly selling phone, the support and amount of users are relatively small. One other thing is that Unihertz dose; They don't release their Kernel Code, which they're obligated to do when they release a custom Version of android (Every Phone every has a modified version of stock android on it.). This documentation expects from you that you know at least the basics regarding Android Modding and the Linux Terminal / Windows CMD! Do your research! This documentation uses the Unihertz Titan Stock UFS Android 10 as Base and with the last Update at that point (07.08.2022 - Android 10.0). In this documentation I install a vanilla gsi (clean from anything, that means fully FOSS and AOSP). There are only links to the Posts (It's important that you read what the files do / are needed for). We will use AOSP 12.1 v414 by phhusson (system-squeak-arm64-ab-vanilla.img) in this documentation. The firmware files are ONLY for the EEA-UFS-Titans! Some people on the discord say it also can be flashed on the TEE-UFS-Titans but I can not confirm that. The same for the patched Boot.img's. I only have an EEA-UFS-Titan. If you have a TEE, proceed with caution! This is only testet on EEA-Titans until now!</p>
+    <p>Anyway. I hope you find this documentation of my time intensive research useful! As always: IF YOU TRY ANYTHING WRITTEN ON THIS BLOG YOU ARE DOING IT AT YOUR OWN RISK! IT SHOULD BE OBVIOUS! DON'T COME TO ME CRYING IF SOMETHING WENT WRONG. THAT'S YOUR PROBLEM AND ONLY YOURS!</p>
+    <p>First check what type of flash you have. As the title of this entry says this is only for UFS-Flash Titans. If you have an EMMC Titan then you need to look how to do it for yourself!!! Lets Check:</p>
+    <p>You can use Device Info HW (<a href="https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=de&gl=US">https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=de&gl=US</a> - See Image below) or download Androbench and check your Sequential Read Speed. Above 450 mbps is UFS, below EMMC (<a href="https://unihertz-titan.neocities.org/">https://unihertz-titan.neocities.org/</a>).</p>
     
     <a href=""><img src="DATA/Hw-Info.png" alt="Screenshot of Device Info HW, Blured with Flash Type marked" style="width:400px;height:400px";></a>
     
-    <h3>When you are VERY VERY VERY VERY sure that your Titan is UFS then continue. WARNING: YOU WILL LOSE ALL DATA ON THE PHONE! DO A BACKUP UP!</h3>
-    <h3><u>Preparation and what to do in the worst case:</u> Make ABSOLUTLY sure you have a working Sp-Flash-Tool v5.2152 !BEFORE! something goes wrong. If you get a bootloop you can use it to get it back to boot. Just flash what you messed up. Download Agent: /DA_PL.bin. Add the Scatter-loading File. Download Only. Now mark your broken partitions. In most cases System.img or/and Boot.Img. Now press Download! Lets hope you  will never need this. But sadly on the Titan there is nearly no way to get into the fastboot mode without a working rom. As soon as you get a bootloop you need a way to reflash the stock system.img to get it un-SoftBricked. How stupid!</h3>
-    <h3>FlashTool:</h3>
+    <p>When you are VERY VERY VERY VERY sure that your Titan is UFS then continue. WARNING: YOU WILL LOSE ALL DATA ON THE PHONE! DO A BACKUP UP!</p>
+    <p><u>Preparation and what to do in the worst case:</u> Make ABSOLUTLY sure you have a working Sp-Flash-Tool v5.2152 !BEFORE! something goes wrong. If you get a bootloop you can use it to get it back to boot. Just flash what you messed up. Download Agent: /DA_PL.bin. Add the Scatter-loading File. Download Only. Now mark your broken partitions. In most cases System.img or/and Boot.Img. Now press Download! Lets hope you  will never need this. But sadly on the Titan there is nearly no way to get into the fastboot mode without a working rom. As soon as you get a bootloop you need a way to reflash the stock system.img to get it un-SoftBricked. How stupid!</p>
+    <p>FlashTool:</p>
     <a href="https://spflashtools.com/linux/sp-flash-tool-v5-2152-for-linux">https://spflashtools.com/linux/sp-flash-tool-v5-2152-for-linux</a>
     <br>
     <br>
-    <h3>Firmware SPECIFIC and ONLY for the Unihert Titan [UFS] (!!!EEA!!! ???TEE???)</h3>
+    <p>Firmware SPECIFIC and ONLY for the Unihert Titan [UFS] (!!!EEA!!! ???TEE???)</p>
     <a href="https://discord.com/channels/722458117266210887/722494185776611399/890735928853819422">https://discord.com/channels/722458117266210887/722494185776611399/890735928853819422</a>
     <br>
     <a href="https://discord.com/channels/722458117266210887/722618142039343114/991570073045180486">https://discord.com/channels/722458117266210887/722618142039343114/991570073045180486</a>
@@ -31,18 +31,18 @@
     <br>
     <a href="https://unihertz-titan.neocities.org/">https://unihertz-titan.neocities.org/</a>
     <br>
-    <h3>Now to the imporant part. What you need to know, to have and to do:</h3>   
-    <h3>First, why are there different ways to do an unlock and gsi-flash between EMMC and UFS?:</h3>
+    <p>Now to the imporant part. What you need to know, to have and to do:</p>   
+    <p>First, why are there different ways to do an unlock and gsi-flash between EMMC and UFS?:</p>
     <a href="https://github.com/phhusson/unihertz_titan/issues/5">https://github.com/phhusson/unihertz_titan/issue/5</a>
     <br>
-    <h3>The GSI (In my case the AOSP 12.1 v414) [system-squeak-arm64-ab-vanilla/FLOSS/GAPPS/GOGAPPS.img]:</h3>    
+    <p>The GSI (In my case the AOSP 12.1 v414) [system-squeak-arm64-ab-vanilla/FLOSS/GAPPS/GOGAPPS.img]:</p>    
     <a href="https://github.com/phhusson/treble_experimentations/releases/">https://github.com/phhusson/treble_experimentations/releases/</a>
-    <h3>A modified boot image (A modified boot.img with the vbmeta patched. It checks if your System was modified before booting). The easiest way to make one is to get the boot.img for your Titan (From your Firmware Archive for the SPFlashTool) and patch it with Magisk. It has an option to patch vbmeta in the boot.img. When it is patched you can boot what you want, similar to a PC:</h3>
+    <p>A modified boot image (A modified boot.img with the vbmeta patched. It checks if your System was modified before booting). The easiest way to make one is to get the boot.img for your Titan (From your Firmware Archive for the SPFlashTool) and patch it with Magisk. It has an option to patch vbmeta in the boot.img. When it is patched you can boot what you want, similar to a PC:</p>
     <a href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a>
-    <h3>If you really REALLY don't want to do this yourself, you could use this boot.img from the Titan Discord. I highly HIGHLY recommend you do it yourself for security reasons! If you still choice to go this route, here is a link to it:</h3>
+    <p>If you really REALLY don't want to do this yourself, you could use this boot.img from the Titan Discord. I highly HIGHLY recommend you do it yourself for security reasons! If you still choice to go this route, here is a link to it:</p>
     <a href="https://discord.com/channels/722458117266210887/722618142039343114/936872357878988831">https://discord.com/channels/722458117266210887/722618142039343114/936872357878988831</a>
     <br>
-    <h3>Enable the Developer-Options and then enable USB-Debugging in the Developer settings, connect your computer and then do the following in the terminal:</h3>
+    <p>Enable the Developer-Options and then enable USB-Debugging in the Developer settings, connect your computer and then do the following in the terminal:</p>
     <p><u><i>adb reboot fastboot</i></u></p>
     <p><u><i>fastboot flash unlock</i></u></p>
     <p><u><i>fastboot reboot</i></u></p>
@@ -53,15 +53,15 @@
     <p><u><i>fastboot flash boot YOUR_PATCHED_BOOT.img</i></u></p>
     <p><u><i>fastboot flash system system-squeak-arm64-ab-vanilla.img</i></u></p>
     <p><u><i>fastboot reboot</i></u></p>
-    <h3>After some time (Without a second reboot) the Unihertz logo should disappear and most likely you get a black screen. THAT'S GOOD! That means that the GSI is booting!!! Most boot logos don't work on the 1:1 screen of the Titan I discovered.</h3>
-    <h3>After some time you sould be in Android 12! NICE!</h3>
-    <h3>Now it is time to get the keyboard as much working as it is possible at the point of writing.</h3>
-    <h3>Install BB-Keyboard on the phone. You could find an already modded APK on the internet (unsafe) or just get the original APK, remove the "Only, BB" dependency yourself, sign and encrypt it again. (Recommended but complicated, probably easier to ask the people on the discord for there source.): <a href="/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html">/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html</a></h3>
-    <h3>Change the Android Keyboard to BB-keyboard and then configure it like you need it. (Could theoretically work with other keyboard apps, but I have not tested it).</h3>
-    <h3>Now get the following repo and extract it and the open a terminal in the main directory.</h3>
+    <p>After some time (Without a second reboot) the Unihertz logo should disappear and most likely you get a black screen. THAT'S GOOD! That means that the GSI is booting!!! Most boot logos don't work on the 1:1 screen of the Titan I discovered.</p>
+    <p>After some time you sould be in Android 12! NICE!</p>
+    <p>Now it is time to get the keyboard as much working as it is possible at the point of writing.</p>
+    <p>Install BB-Keyboard on the phone. You could find an already modded APK on the internet (unsafe) or just get the original APK, remove the "Only, BB" dependency yourself, sign and encrypt it again. (Recommended but complicated, probably easier to ask the people on the discord for there source.): <a href="/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html">/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html</a></p>
+    <p>Change the Android Keyboard to BB-keyboard and then configure it like you need it. (Could theoretically work with other keyboard apps, but I have not tested it).</p>
+    <p>Now get the following repo and extract it and the open a terminal in the main directory.</p>
     <a href="https://github.com/SolidHal/Unihertz-Titan-lineageos-microg/">https://github.com/SolidHal/Unihertz-Titan-lineageos-microg/</a>
     <br>
-    <h3>Now execute all the following things:</h3>
+    <p>Now execute all the following things:</p>
     <p><u><i>adb root</i></u></p>
     <p><u><i>adb remount</i></u></p>
     <p><u><i>adb shell mount -o remount,rw /</i></u></p>
@@ -86,12 +86,12 @@
     <p><u><i>adb push resources/keyboard/Android10/system_usr_keychars/* /system/usr/keychars/</i></u></p>
     <p><u><i>adb push resources/keyboard/Android10/system_usr_keylayout/* /system/usr/keylayout/</i></u></p>
     <p><u><i>adb reboot</i></u></p>
-    <h3>After all of this the Keyboard works perfectly! Only the backlight(ONLY ON AOSP) and the Touch scroll will not work. Touch scroll is possible, but very buggy (that's why you install all the stuff and then remove some of it to get everything working as well as possible. This can change in the future but at this point it is more broken than working). The linked guide also mentions it that it is really buggy. I highly recommend to do the "Touchpad - Keyboard"-Fix in the "WORKAROUNDs"-Section after this.</h3>
+    <p>After all of this the Keyboard works perfectly! Only the backlight(ONLY ON AOSP) and the Touch scroll will not work. Touch scroll is possible, but very buggy (that's why you install all the stuff and then remove some of it to get everything working as well as possible. This can change in the future but at this point it is more broken than working). The linked guide also mentions it that it is really buggy. I highly recommend to do the "Touchpad - Keyboard"-Fix in the "WORKAROUNDs"-Section after this.</p>
     <a href="https://github.com/SolidHal/Unihertz-Titan-lineageos-microg">https://github.com/SolidHal/Unihertz-Titan-lineageos-microg</a>
-    <h3>That's pretty much it. Now you have a fully modded and mostly working Titan with unlocked bootloader for GSI's and all the recovery tools you could ever need.</h3>
-    <h3>If you are wondering how well everything works, here is a short list of my experience (And before someone asks; The cameras are as bad as before and the fingerprint reader as unreliable as before, so no changes there.).:</h3>
-    <h3>You can get a good Idea of what GSI's are out there in this List (DON'T INSTALL ANY RANDOM GSI! IT'S YOUR PHONE-OS! ONLY INSTALL GSI'S YOU CAN TRUST!): <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list</a></h3>
-    <h3>Here is a List of ROM's I tested (With small Comments (Links to them in the Sources Section)):</h3>
+    <p>That's pretty much it. Now you have a fully modded and mostly working Titan with unlocked bootloader for GSI's and all the recovery tools you could ever need.</p>
+    <p>If you are wondering how well everything works, here is a short list of my experience (And before someone asks; The cameras are as bad as before and the fingerprint reader as unreliable as before, so no changes there.).:</p>
+    <p>You can get a good Idea of what GSI's are out there in this List (DON'T INSTALL ANY RANDOM GSI! IT'S YOUR PHONE-OS! ONLY INSTALL GSI'S YOU CAN TRUST!): <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list</a></p>
+    <p>Here is a List of ROM's I tested (With small Comments (Links to them in the Sources Section)):</p>
     <h4>From my Testing only GSIs with the following properties do boot on the Unihertz Titan: [ARM64 - Binder | a/b] (GSIs with only ARM64 (without Binder) for example or vndklite-GSI'S or A-Only (and so on...) will not boot!</h4>
     <ul>
       <li>AOSP 12.1 v414 - Android 12 - (phh (phhusson)) - Works, except for the Keyboard-Backlight.</li>
@@ -102,13 +102,13 @@
       <li>Android_13.0.0_r14 ci-20221113 - Android 13 - (TrebleDroid Builders) - Works as good as any other phh (phhusson) GSI, because they are the successor of them. Uses a lot of battery and is very slow on the Unitherz Titan (Seems like it is a Unihertz Titan specific issue). Keyboard-Backlight still dose not work. Many AOSP-Stock-System-App's are so outdated that they don't work all that well today (Contacts, Gallery, ...). You can replace them with alternatives (App's from SimpleMobileTools for exapmle).</li>
       <li>LineageOS-20.0-20230418-UNOFFICIAL-arm64_bvS - TD-based - Android 13 - (AndyYan) - Works great! VERY Fast! Can have random reboots. IDK from why.</li>
     </ul>
-    <h3>Broken:</h3>
+    <p>Broken:</p>
     <ul>
       <li>No Keyboard scrolling for now</li>
       <li>Scrcpy (USB-Android-ADB Screen-Mirroring) is broken for now. But 99.9% of people don't need this.</li>
     </ul>
 
-    <h3>GSI Specific things:</h3>
+    <p>GSI Specific things:</p>
     <ul>
       <li>[ONLY ON PHH-AOSP-GSIs] - Boot animation doesn't work, but who cares... .</li>
       <li>[ONLY ON PHH-AOSP-GSIs] - No Keyboard backlight for now.</li>
@@ -119,7 +119,7 @@
       <li>I love gesture navigation, but I really hate the navigation bar on Android. The screen is already small enough. AOSP doesn't support removing it because Google. To remove it on AOSP go into the settings and change the following: "Settings/PH Treble Settings/Misc features/Force navigation bar disabled = YES". Then Reboot. It disables the back gestures left and right, sadly (Not the bottom one for some reason). To fix this you could use a gesture app like Fluid N. G. by paprikanotfound and disable the bottom gesture and only use the back gestures left and right (max every slider for size and sensitivity). Now it works, feels and looks exactly like before, but without the annoying thing at the bottom.</li>
     </ul>
 
-    <h3>FIXES/WORKAROUNDs:</h3>
+    <p>FIXES/WORKAROUNDs:</p>
     <ul>
       <li>(Sources: <a href="https://github.com/phhusson/unihertz_titan/issues/3">https://github.com/phhusson/unihertz_titan/issues/3</a> and <a href="https://docs.google.com/document/d/1Kj7poftuXIb9ZWAHxNzDCjwbCYwGQnohe7dV4EYnkQk/edit?usp=sharing">https://docs.google.com/document/d/1Kj7poftuXIb9ZWAHxNzDCjwbCYwGQnohe7dV4EYnkQk/edit?usp=sharing</a>) - The Touchpad of the Keyboard is (after all the keyboard fixes) very buggy and its better to disable it. Just create a file at "<u>/etc/excluded-input-devices.xml</u>" and put "<u>&lt;devices&gt;&lt;device name="mtk-pad"/&gt;&lt;/devices&gt;</u>" into it. Set it to "<u>rw-r-r</u>" and reboot. You can do this with ADB or with a ROOT-File-Explorer.</li>
       <li>Disable USB-Debugging after you're done with installing. For some reason some GSI's run better with it disabled (GSI's were made by Google to make debugging is easier and cheaper for developers). Could be that there is some background output with it enabled. It is also safer to keep it disabled.</li>
@@ -134,14 +134,14 @@
       <li>If the brightness slider is wrong (too bright or too dim) enable the following (It will not make it work perfectly but at least it gives you 0-100% back. I only found one GSI with this issue.): Settings/Phh Treble Settings/Misc features/Use linear screen brightness slider</li>
     </ul>
     
-    <h3>One interesting thing is that, on the Stock-ROM, I never got ANY SD-Card to work. But on GSI-Rom's it worked perfectly. On Stock it formatted the SD-Card but then treated it like it was a new one and asked for formatting again. This circle of formatting never ended, but on GSI's it worked perfectly.</h3>
-    <h3>Also: One thing that can extend battery life even further is to lower the resolution. I tried around and half works best. That means going from 1440x1440@400dpi to 720x720@200dpi. Is it noticeable? Yes, its a little bit more blurry, but thats it. The Titan does not have the best screen to begin with, to be honest. But even more battery life for a slightly worse image sounds good to me, the image was never great to begin with. Before I had around 3 days battery life, now it is around 3.5 to 4. and thats with it driven daily for around a year and a half now. If you want to do it too, here are the commands (Needs Android adb enabled for execution, should be disabled after that for security and performance. Be sure to copy everything, this can make the UI unusable if mistyped or miscopied):</h3>
+    <p>One interesting thing is that, on the Stock-ROM, I never got ANY SD-Card to work. But on GSI-Rom's it worked perfectly. On Stock it formatted the SD-Card but then treated it like it was a new one and asked for formatting again. This circle of formatting never ended, but on GSI's it worked perfectly.</p>
+    <p>Also: One thing that can extend battery life even further is to lower the resolution. I tried around and half works best. That means going from 1440x1440@400dpi to 720x720@200dpi. Is it noticeable? Yes, its a little bit more blurry, but thats it. The Titan does not have the best screen to begin with, to be honest. But even more battery life for a slightly worse image sounds good to me, the image was never great to begin with. Before I had around 3 days battery life, now it is around 3.5 to 4. and thats with it driven daily for around a year and a half now. If you want to do it too, here are the commands (Needs Android adb enabled for execution, should be disabled after that for security and performance. Be sure to copy everything, this can make the UI unusable if mistyped or miscopied):</p>
     <p>720p (Lower):</p>
     <p><u><i>adb shell wm size 720x720 && adb shell wm density 200</i></u></p>
     <p>1440p (Original)</p>
     <p><u><i>adb shell wm size 1440x1440 && adb shell wm density 400</i></u></p>
     <br>
-    <h3>I hope I could help you with the documentation of my adventures with Unihertz Titan Modding on a UFS-Model.</h3>
+    <p>I hope I could help you with the documentation of my adventures with Unihertz Titan Modding on a UFS-Model.</p>
     <br>
     <b>THANKS TO!:</b>
     <ul>
@@ -157,7 +157,7 @@
       <li>Crackou (Discord)</li>
       <li>SolidHal (GitHub)</li>    
     </ul>
-    <b>Sources:</b>
+    <h2>Sources:</h2>
     <ul>
       <li><a href="https://github.com/phhusson/unihertz_titan/issues/5">https://github.com/phhusson/unihertz_titan/issues/5</a></li>
       <li><a href="https://discord.com/channels/722458117266210887/722618142039343114/936872357878988831">https://discord.com/channels/722458117266210887/722618142039343114/936872357878988831</a></li>

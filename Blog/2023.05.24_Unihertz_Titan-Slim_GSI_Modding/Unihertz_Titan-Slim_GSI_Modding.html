@@ -8,15 +8,15 @@
     <script src="/Assets/GetTopBar.js"></script>
     
     <h1>Unihertz Titan Slim - GSI's and Modding</h1>    
-    <h3>It's me again trying to mod Unihertz Titan Phone. But this time all of the sesearch and documentation work was already done by <a href="https://github.com/rumplestilzken">rumplestilzken @ Github</a> with absolutely great tools and documentation. This entry is only to show in what order I did everything and how it worked out. This one will be written more like a continues Blog entry because I'm writing this over the time I wait for the phone to arrive until I have it modded and working. Last time I modded a Unihertz and wrote an entry about it I primarily did research and testing. The development and reverse engineering was already done by others, just not in one place and all over the internet.</h3>
-    <h3>This time no stupid UFS and EMMC stuff. Only my Linux PC, a VM with Ubuntu and easy to follow guide form rumplestilzken. Just doing everything rumplestilzken documented! THANKS AGAIN TO THEM! YOU ARE DOING SUCH A GREAT JOB!!!</h3>
-    <h3>As last time, it is important that you have all files prepared, the phone charged and a working SP Flash Tool!!!</h3>
-    <h3>If somthing goes wrong reflash the original file with the bootloader or, if not accessible, SP Flash Tool. In most cases vbmeta, boot.img or the super.img.</h3>
-    <h3>I want to make clear again that this is ONLY a documentation on how I followed rumplestilzken documentation's and did this mod to my phone. Not more! All the hard work and hours of reverse engineering, programming and documenting were done by <a href="https://github.com/rumplestilzken">rumplestilzken @ Github</a>.</h3>
+    <p>It's me again trying to mod Unihertz Titan Phone. But this time all of the sesearch and documentation work was already done by <a href="https://github.com/rumplestilzken">rumplestilzken @ Github</a> with absolutely great tools and documentation. This entry is only to show in what order I did everything and how it worked out. This one will be written more like a continues Blog entry because I'm writing this over the time I wait for the phone to arrive until I have it modded and working. Last time I modded a Unihertz and wrote an entry about it I primarily did research and testing. The development and reverse engineering was already done by others, just not in one place and all over the internet.</p>
+    <p>This time no stupid UFS and EMMC stuff. Only my Linux PC, a VM with Ubuntu and easy to follow guide form rumplestilzken. Just doing everything rumplestilzken documented! THANKS AGAIN TO THEM! YOU ARE DOING SUCH A GREAT JOB!!!</p>
+    <p>As last time, it is important that you have all files prepared, the phone charged and a working SP Flash Tool!!!</p>
+    <p>If somthing goes wrong reflash the original file with the bootloader or, if not accessible, SP Flash Tool. In most cases vbmeta, boot.img or the super.img.</p>
+    <p>I want to make clear again that this is ONLY a documentation on how I followed rumplestilzken documentation's and did this mod to my phone. Not more! All the hard work and hours of reverse engineering, programming and documenting were done by <a href="https://github.com/rumplestilzken">rumplestilzken @ Github</a>.</p>
     <br>
-    <h3><u>As usual and always on the internet: If you do this kind of BS it is always at your own risk. !OBVIOUSLY!</u></h3>
+    <p><u>As usual and always on the internet: If you do this kind of BS it is always at your own risk. !OBVIOUSLY!</u></p>
     <br>
-    <h3>What I did and how it went:</h3>
+    <p>What I did and how it went:</p>
     <ul>
       <li><h2><b><u>1. Creating the Custom Rom super.img:</u></b></h2></li>
       <li>Downloading the Stock.img, Downloading Andy Yan's "lineage-20.0-20230507-UNOFFICIAL-arm64_bvN.img.xz"-GSI, preparing the "mksuper" tools from rumplestilzken, following their guide to creating a super.img with the command: <p><u><i>python3 mksuper.py -dev slim</i></u></p></li>
@@ -88,10 +88,10 @@
       <li>Open Settings -> Phh Treble Settings -> Misc features -> Use alternate ay to detect headset</li>
       <li>Open Settings -> Phh Treble Settings -> IMS Features -> Check: Request IMS Network</li>
       <li>Open Settings -> Phh Treble Settings -> IMS Features -> "Install IMS APK For MediaTek R Vendor"" [If this Step dose not work: Download the ims-mtk-q.apk from phhusson's website: <a href="https://treble.phh.me/stable/">https://treble.phh.me/stable/</a> and install it with <u><i>adb install ims-mtk-q.apk</i></u></li>
-      <h3>####### Bluetooth Fix (UI):</h3>
+      <p>####### Bluetooth Fix (UI):</p>
       <li>Open Settings -> Phh Treble Settings -> Misc features -> Check: Use System Wide BT HAL</li>
       <li>Open Settings -> Phh Treble Settings -> Misc features -> Bluetooth workarounds -> Check: Mediatek</li>
-      <h3>####### Bluetooth Fix (alternative using ADB - @rumplestilzken thanks for finding it!):</h3>
+      <p>####### Bluetooth Fix (alternative using ADB - @rumplestilzken thanks for finding it!):</p>
       <li><p><u><i>adb shell settings put system persist.sys.bt.unsupport.features 00000000</i></u></p></li>
       <li><p><u><i>adb shell settings put system persist.sys.bt.unsupport.states 00000000</i></u></p></li>
       <li><p><u><i>adb shell settings put system persist.sys.bt.unsupport.stdfeatures 000001</i></u></p></li>
@@ -100,12 +100,12 @@
       <li>Disable "Root-Debugging" and "USB-Debugging and then Reboot.</li>
       <li>Installing Kika-Keyboard or BB-Keyboard.</li>
     </ul>  
-    <h3>And that was pretty much it. Now everything works great. The super.img situation on modern android makes updating GSI's even more annoying especially because you need to create a super.img everytime and then still need to apply all the keyboard files again after booting the first time after the update. Rumplestilzken offers finished GSI's on there Github. With them you only need to create the super.img. No need to any of the steps after step 4.</h3>
-    <h3>A lot of Thanks to rumplestilzken for documenting, creating tools and workarounds, for all the research and especially for the help and proofreading of my steps during the modding process. You made this modding process so much less painful, so much safer and easier, especially with your mksuper-tool and the gargoyle-GSI's!</h3>
-    <h3>A lot of settings and modifications I do to Android after insalling everthing (stuff like ACCA, AdAway, ...) can be found in my old Blogpost about the OG Unihertz Titan UFS and GISs and Android 13: <a href="/Blog/2022.08.07_Unihertz_Titan_GSI_UFS/Unihertz_Titan_GSI_UFS.html">/Blog/2022.08.07_Unihertz_Titan_GSI_UFS/Unihertz_Titan_GSI_UFS.html</a></h3>
+    <p>And that was pretty much it. Now everything works great. The super.img situation on modern android makes updating GSI's even more annoying especially because you need to create a super.img everytime and then still need to apply all the keyboard files again after booting the first time after the update. Rumplestilzken offers finished GSI's on there Github. With them you only need to create the super.img. No need to any of the steps after step 4.</p>
+    <p>A lot of Thanks to rumplestilzken for documenting, creating tools and workarounds, for all the research and especially for the help and proofreading of my steps during the modding process. You made this modding process so much less painful, so much safer and easier, especially with your mksuper-tool and the gargoyle-GSI's!</p>
+    <p>A lot of settings and modifications I do to Android after insalling everthing (stuff like ACCA, AdAway, ...) can be found in my old Blogpost about the OG Unihertz Titan UFS and GISs and Android 13: <a href="/Blog/2022.08.07_Unihertz_Titan_GSI_UFS/Unihertz_Titan_GSI_UFS.html">/Blog/2022.08.07_Unihertz_Titan_GSI_UFS/Unihertz_Titan_GSI_UFS.html</a></p>
     <br>
     <br>
-    <b>Sources:</b>
+    <h2>Sources:</h2>
     <ul>
       <li><a href="https://github.com/rumplestilzken">https://github.com/rumplestilzken</a></li>
       <li><a href="https://www.reddit.com/r/Magisk/comments/osicoa/help_question_can_i_patch_the_bootimg_for_a/">https://www.reddit.com/r/Magisk/comments/osicoa/help_question_can_i_patch_the_bootimg_for_a/</a></li>

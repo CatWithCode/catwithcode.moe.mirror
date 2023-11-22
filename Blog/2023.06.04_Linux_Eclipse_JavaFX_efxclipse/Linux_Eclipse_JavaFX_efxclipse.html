@@ -8,9 +8,9 @@
     <script src="/Assets/GetTopBar.js"></script>
 
     <h1>Using Eclipse with JavaFX (with SceneBuilder, e(fx)clipse and fixed .fxml-Bug) on Linux</h1>    
-    <h3>I wanted to use my Eclipse work environment on Linux, but if you look a bit into it you will see that there is a lot of tinkering needed to get everything working when it comes to JavaFX. Here I will document how I did it.</h3>
-    <h3>Limitations: You need to install Eclipse and the SceneBuilder on your system and you can NOT use the Eclipse Flatpak because there is a filesystem path/permission issue ans I use Arch Linux and the AUR here.</h3>
-    <h3>Now for the important part. How I did it:</h3>
+    <p>I wanted to use my Eclipse work environment on Linux, but if you look a bit into it you will see that there is a lot of tinkering needed to get everything working when it comes to JavaFX. Here I will document how I did it.</p>
+    <p>Limitations: You need to install Eclipse and the SceneBuilder on your system and you can NOT use the Eclipse Flatpak because there is a filesystem path/permission issue ans I use Arch Linux and the AUR here.</p>
+    <p>Now for the important part. How I did it:</p>
     <ol>
       <li>Install "eclipse-java" from the AUR</li>
       <li>Start Eclipse</li>
@@ -27,7 +27,7 @@
       <li>Now go to Window >> Preferences >> JavaFX and click "Browse..." for the "SceneBuilder executable" and got to "/opt/scenebuilder/bin/" and select "SceneBuilder"</li>
       <li>"Apply" and "Apply and Close"</li>
       <li>Go to Help >> Install New Software >> Add >> Name = "e(fx)clipse nightly" and Location = "https://download.eclipse.org/efxclipse/updates-nightly/site/" >> Add >> Select everything >> Next >> Finish >> Wait until everything is installed, and when it asks you to restart Eclipse, press "Restart Eclipse".</li>
-      <h3>>> Eclipse is now properly configured. Now you need to configure your JavaFX project:</h3>
+      <p>>> Eclipse is now properly configured. Now you need to configure your JavaFX project:</p>
       <li>Create a JavaFX-Project</li>
       <li>Now rightclick on the Project >> Properties >> Java Build Path >> Configute Build Path</li>
       <li>Select Libraries and select the "Modulepath" folder, Select "Add Library...", User Library, Select JavaFX and the click "Finish" and then "Apply" and "Apply and Close"</li>
@@ -37,12 +37,12 @@
       </li>
       <li>"Apply" and "Apply and Close"</li>
     </ol>
-    <h3><b>NOTE:</b> If you have a problem with your project where all the JavaFX stuff works except for javafx.fxml and Java complains that it is missing, just add the following to your "module-info.java" inside of your project:</h3>
+    <p><b>NOTE:</b> If you have a problem with your project where all the JavaFX stuff works except for javafx.fxml and Java complains that it is missing, just add the following to your "module-info.java" inside of your project:</p>
     <p><u><i>requires javafx.fxml;</i></u></p>
     <br>
-    <h3>Now you should be able to use JavaFX inside your project, you should be able to create new .fxml files without error, use the Scenebuilder and compile your project in any way you like. Unfortunately, you have to add all the project configuration stuff to each new project you create, but it only takes a minute or two. How I could help you by documenting how I did it.</h3>
+    <p>Now you should be able to use JavaFX inside your project, you should be able to create new .fxml files without error, use the Scenebuilder and compile your project in any way you like. Unfortunately, you have to add all the project configuration stuff to each new project you create, but it only takes a minute or two. How I could help you by documenting how I did it.</p>
     <br>
-    <b>Sources:</b>
+    <h2>Sources:</h2>
     <ul>
       <li><a href="https://aur.archlinux.org/packages/eclipse-java">https://aur.archlinux.org/packages/eclipse-java</a></li>
       <li><a href="https://aur.archlinux.org/packages/javafx-scenebuilder">https://aur.archlinux.org/packages/javafx-scenebuilder</a></li>

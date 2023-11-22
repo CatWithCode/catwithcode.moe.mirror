@@ -8,7 +8,7 @@
     <script src="/Assets/GetTopBar.js"></script>
     
     <h1>Brother Network-Scanner on Linux with a Firewall in between</h1>
-    <h3>Well... Brother printers and scanners can be tricky to get working under Linux because they often use or need their own drivers. Now put a firewall in between and you are ready for some fun... . Yayyy... . I got it to work and documented my way of doing it, so you don't have to 😞. I used ufw with gufw as the frontend. This should work on all firewall's by just replacing the steps in there configuration.</h3>
+    <p>Well... Brother printers and scanners can be tricky to get working under Linux because they often use or need their own drivers. Now put a firewall in between and you are ready for some fun... . Yayyy... . I got it to work and documented my way of doing it, so you don't have to 😞. I used ufw with gufw as the frontend. This should work on all firewall's by just replacing the steps in there configuration.</p>
     <ol>
       <li>Install "Gufw"</li>
       <li>Go to "Rules", press the "+"-Button, Select "Preconfigured" and find "CUPS", "SANE-Scanner" and if it's still there "SANE-Manual".</li>
@@ -26,11 +26,11 @@
         -"ip" must be the IP of your printer/scanner. To find out what IP it has, you can use the WebUI of it, look in the settings if it has a display or disable your firewall, use "<u><i>scanimage -L</i></u>" to find it and then re-enable the firewall.
       </li>      
     </ol>
-    <h3>Now, when you launch your favourite scanning tool, such as Simple-Scan, you should see the scanner and sould be able to scan documents with it.</h3>
-    <h3>I hope I could help you!</h3>
+    <p>Now, when you launch your favourite scanning tool, such as Simple-Scan, you should see the scanner and sould be able to scan documents with it.</p>
+    <p>I hope I could help you!</p>
     <br>
     <br>
-    <b>Sources:</b>
+    <h2>Sources:</h2>
     <ul>
       <li><a href="https://wiki.archlinux.org/title/SANE/Scanner-specific_problems">https://wiki.archlinux.org/title/SANE/Scanner-specific_problems</a></li>
       <li><a href="https://wiki.archlinux.org/title/Sane">https://wiki.archlinux.org/title/Sane</a></li>

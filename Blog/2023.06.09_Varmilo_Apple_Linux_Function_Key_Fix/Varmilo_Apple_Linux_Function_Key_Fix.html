@@ -8,30 +8,30 @@
     <script src="/Assets/GetTopBar.js"></script>
     
     <h1>Fixing Varmilo/Similar keyboards being mistaken for a Apple keyboard under Linux</h1>
-    <h3>I was given a Varmilo keyboard some time ago and it works fine on MacOS and Windows. But on Linux the FN (function) keys are reversed. Normally you hold down FN and press a number for an FN key, but on Linux you get media-keys instead. You can get FN-keys by pressing FN+PageDown, pressing the number and then FN-PageUp. This is annoying. The hid-apple kernel module is meant to fix this BUT for keyboards that are mistaken for an Apple keyboard it is a bit more finicky. I searched for quite a while and finally found a configuration that works for me.</h3>
-    <h3>This has been done on Arch Linux, but should also work on other distributions if you know where to put the files and configure things in the right places.</h3>
+    <p>I was given a Varmilo keyboard some time ago and it works fine on MacOS and Windows. But on Linux the FN (function) keys are reversed. Normally you hold down FN and press a number for an FN key, but on Linux you get media-keys instead. You can get FN-keys by pressing FN+PageDown, pressing the number and then FN-PageUp. This is annoying. The hid-apple kernel module is meant to fix this BUT for keyboards that are mistaken for an Apple keyboard it is a bit more finicky. I searched for quite a while and finally found a configuration that works for me.</p>
+    <p>This has been done on Arch Linux, but should also work on other distributions if you know where to put the files and configure things in the right places.</p>
     <br>
-    <h3>First I had to update the firmware. I would recommend doing this in a VM!</h3>
-    <h3><a href="https://en.varmilo.com/keyboardproscenium/Driverdownload">https://en.varmilo.com/keyboardproscenium/Driverdownload</a></h3>
+    <p>First I had to update the firmware. I would recommend doing this in a VM!</p>
+    <p><a href="https://en.varmilo.com/keyboardproscenium/Driverdownload">https://en.varmilo.com/keyboardproscenium/Driverdownload</a></p>
     <br>
-    <h3><i>Then I configured hid-apple correctly:</i></h3>
-    <h3>Creating the config file: <p><u><i>echo options hid_apple fnmode=0 | sudo tee -a /etc/modprobe.d/hid_apple.conf</i></u></p></h3>
+    <p><i>Then I configured hid-apple correctly:</i></p>
+    <p>Creating the config file: <p><u><i>echo options hid_apple fnmode=0 | sudo tee -a /etc/modprobe.d/hid_apple.conf</i></u></p></p>
     <br>
-    <h3>Checking if the file was created correctly (EXIT! DON'T SAVE!): <p><u><i>sudo nano /etc/modprobe.d/hid_apple.conf</i></u></p></h3>
+    <p>Checking if the file was created correctly (EXIT! DON'T SAVE!): <p><u><i>sudo nano /etc/modprobe.d/hid_apple.conf</i></u></p></p>
     <br>
-    <h3>Reload the hid-apple-module-config to check if it works: <p><u><i>sudo rmmod hid_apple; sudo modprobe hid_apple</i></u></p></h3>
+    <p>Reload the hid-apple-module-config to check if it works: <p><u><i>sudo rmmod hid_apple; sudo modprobe hid_apple</i></u></p></p>
     <br>
-    <h3>Makeing it permanent: <p><u><i>sudo mkinitcpio -p linux</i></u></p> or <p><u><i>sudo dracut -v -f</i></u></p></h3>
+    <p>Makeing it permanent: <p><u><i>sudo mkinitcpio -p linux</i></u></p> or <p><u><i>sudo dracut -v -f</i></u></p></p>
     <br>
-    <h3>Time to reboot and check again: <p><u><i>sudo reboot</i></u></p></h3>
+    <p>Time to reboot and check again: <p><u><i>sudo reboot</i></u></p></p>
     <br>
-    <h3>Done. :)</h3>
+    <p>Done. :)</p>
     <br>
-    <h3>If it did not work, you can check the links in the Sources section for all the resources that helped me getting it to work with my keyboard. (Ducky x Varmilo Miya Mac Moonlight [Varmilo Miya69-Mac]).</h3>
-    <h3>Many thanks to jpihl over at unix.stackexchange.com! There answer to an older question did the trick for me!: <a href="https://unix.stackexchange.com/a/609797">https://unix.stackexchange.com/a/609797</a></h3>
+    <p>If it did not work, you can check the links in the Sources section for all the resources that helped me getting it to work with my keyboard. (Ducky x Varmilo Miya Mac Moonlight [Varmilo Miya69-Mac]).</p>
+    <p>Many thanks to jpihl over at unix.stackexchange.com! There answer to an older question did the trick for me!: <a href="https://unix.stackexchange.com/a/609797">https://unix.stackexchange.com/a/609797</a></p>
     <br>
     <br>
-    <b>Sources:</b>
+    <h2>Sources:</h2>
     <ul>
       <li><a href="https://unix.stackexchange.com/questions/407501/make-apple-keyboard-settings-persistent-in-hid-apple-parameters">https://unix.stackexchange.com/questions/407501/make-apple-keyboard-settings-persistent-in-hid-apple-parameters</a></li>
       <li><a href="https://unix.stackexchange.com/a/609797">https://unix.stackexchange.com/a/609797</a></li>
