@@ -23,7 +23,7 @@ https://github.com/antijingoist/opendyslexic
 
 # - - - - Regular:*/
 @font-face {
-    font-family: opendyslexic-0.910.12-rc2-2019.10.17;
+    font-family: opendyslexic;
     src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Regular.woff2);
     font-style: normal;
     font-weight: normal;
@@ -31,7 +31,7 @@ https://github.com/antijingoist/opendyslexic
 
 /* # - - - - Bold:*/
 @font-face {
-    font-family: opendyslexic-0.910.12-rc2-2019.10.17;
+    font-family: opendyslexic;
     src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Bold.woff2);
     font-style: normal;
     font-weight: bold;
@@ -39,7 +39,7 @@ https://github.com/antijingoist/opendyslexic
 
 /* # - - - - Italic:*/
 @font-face {
-    font-family: opendyslexic-0.910.12-rc2-2019.10.17;
+    font-family: opendyslexic;
     src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Italic.woff2);
     font-style: italic;
     font-weight: normal;
@@ -47,7 +47,7 @@ https://github.com/antijingoist/opendyslexic
 
 /* # - - - - Bold Italic:*/
 @font-face {
-    font-family: opendyslexic-0.910.12-rc2-2019.10.17;
+    font-family: opendyslexic;
     src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Bold-Italic.woff2);
     font-style: italic;
     font-weight: bold;
@@ -56,7 +56,7 @@ https://github.com/antijingoist/opendyslexic
 
 /* # - General Settings:*/
 * {
-    font-family: 'opendyslexic-0.910.12-rc2-2019.10.17', 'Courier New', 'monospace';
+    font-family: 'opendyslexic', 'Courier New', 'monospace';
     background-color: #19181b;
     color: #f5f5fa;
 }
