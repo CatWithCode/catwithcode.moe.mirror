@@ -54,7 +54,9 @@ https://github.com/antijingoist/opendyslexic
 }
 /* # # # */
 
-/* # - General Settings:*/
+/* # General Settings:
+
+# - Global Font and Color:*/
 * {
     font-family: 'opendyslexic', 'Courier New', 'monospace';
     background-color: #19181b;
