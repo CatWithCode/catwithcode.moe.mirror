@@ -9,10 +9,10 @@ https://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web
 https://scripts.sil.org/cms/scripts/page.php?item_id=OFL10_web
 https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ10_web
-/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/License/OFL-FAQ.txt
-/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/License/ofl-faq10.txt
-/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/License/OFL.txt
-/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/License/OFL10.txt
+/Assets/Fonts/OpenDyslexic/License/OFL-FAQ.txt
+/Assets/Fonts/OpenDyslexic/License/ofl-faq10.txt
+/Assets/Fonts/OpenDyslexic/License/OFL.txt
+/Assets/Fonts/OpenDyslexic/License/OFL10.txt
 https://en.wikipedia.org/wiki/SIL_Open_Font_License
 https://opendyslexic.org/
 https://antijingoist.gumroad.com/l/OpenDyslexic
@@ -24,7 +24,7 @@ https://github.com/antijingoist/opendyslexic
 # - - - - Regular:*/
 @font-face {
     font-family: opendyslexic;
-    src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Regular.woff2);
+    src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Regular.woff2);
     font-style: normal;
     font-weight: normal;
 }
@@ -32,7 +32,7 @@ https://github.com/antijingoist/opendyslexic
 /* # - - - - Bold:*/
 @font-face {
     font-family: opendyslexic;
-    src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Bold.woff2);
+    src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Bold.woff2);
     font-style: normal;
     font-weight: bold;
 }
@@ -40,7 +40,7 @@ https://github.com/antijingoist/opendyslexic
 /* # - - - - Italic:*/
 @font-face {
     font-family: opendyslexic;
-    src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Italic.woff2);
+    src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Italic.woff2);
     font-style: italic;
     font-weight: normal;
 }
@@ -48,7 +48,7 @@ https://github.com/antijingoist/opendyslexic
 /* # - - - - Bold Italic:*/
 @font-face {
     font-family: opendyslexic;
-    src: url(/Assets/Fonts/opendyslexic-0.910.12-rc2-2019.10.17/OpenDyslexic-Bold-Italic.woff2);
+    src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Bold-Italic.woff2);
     font-style: italic;
     font-weight: bold;
 }
