@@ -205,10 +205,12 @@ holographic : /home/###YOUR_USERNAME###/.local/share/Steam/steamapps/common/Mixe
       <li>To get the most out of Cyberpunk 2077, we need a few mods:
         <ul>
           <li>Use Protontricks and add "d3dcompiler_47.dll" to cyberpunk 2077</li>
-          <li>How to make ReShade effects work in VR (Enable in the R.E.A.L-Reshade-Settings: FXAA and ColorLabs): <a href="https://www.patreon.com/posts/63441060">https://www.patreon.com/posts/63441060</a></li>
+          <li>How to make ReShade effects work in VR (Enable in the R.E.A.L-Reshade-Settings: FXAA, FakeHDR and ColorLabs): <a href="https://www.patreon.com/posts/63441060">https://www.patreon.com/posts/63441060</a></li>
           <li>Disable TAA and Bloom: <a href="https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description</a></li>
           <li>General Optimization: <a href="https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description</a></li>
-          <li>Set the resolution as close as possable to the resolution of your headset (In the R.E.A.L-Settings).</li>
+          <li>Set the resolution to around 2400 if your hardware can do that (In the R.E.A.L-Settings).</li>
+          <li>In the R.E.A.L-Settings under "Advanced", set the "Render Mode" to "Legacy AER" (or "AER 2.0" if your Nvidia card supports it).</li>
+          <li>In the Cyberpunk 2077 Settings set "Crowd Density" to high.</li>
         </ul>
       </li>
       <li>Optionally, you can increase performance and frame time by a good amount by running <u><i>sudo setcap CAP_SYS_NICE=eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u>. BUT this could break all controller support for good (e.g. in Cyberpunk or for racing sims and later for VR controllers!). To remove it, just run: <u><i>sudo setcap CAP_SYS_NICE-eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u></li>
@@ -219,7 +221,6 @@ holographic : /home/###YOUR_USERNAME###/.local/share/Steam/steamapps/common/Mixe
           <li>Normal: <u><i>monado-service</i></u></li>
           <li>Debugging (Display On): <u><i>XRT_DEBUG_GUI=1 SLAM_UI=1 XRT_COMPOSITOR_COMPUTE=1 monado-service</i></u></li>
           <li>Debbunig FULL (Display Off): <u><i>XRT_COMPOSITOR_FORCE_XCB=1 XRT_DEBUG_GUI=1 SLAM_UI=1 XRT_COMPOSITOR_COMPUTE=1 WMR_LOG=debug monado-service</i></u></li>
-          
         </ul>
       </li>
     </ol>
