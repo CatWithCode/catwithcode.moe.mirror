@@ -202,6 +202,15 @@ holographic : /home/###YOUR_USERNAME###/.local/share/Steam/steamapps/common/Mixe
       <li>After SteamVR runns you can start a game in VR. :D</li>
       <li>For Cyberpunk 2077 VR you need to get the R.E.A.L. Mod from LukeRoss at (The patreon required at the time of writing is 10€): <a href="https://www.patreon.com/realvr">https://www.patreon.com/realvr</a></li>
       <li>Place the file in the game folder as the developer intended. Open a terminal and run <u><i>wine RealConfig.bat</i></u>. It SOULD work. Then have a look at the "option.replace" for Cyberpunk and change the settings in the file "/###PATH_TO_YOUR_STEAM_LIBARY###/SteamLibrary/steamapps/compatdata/1091500/pfx/drive_c/users/steamuser/AppData/Local/CD Projekt Red/Cyberpunk 2077/UserSettings.json". You could also use protontricks to run the bath in the gamefolder inside the prefix BUT this only worked ONCE for me. I cannot share the file for copyright reasons. You could also do the install step on Windows and copy the json file and the game files to Linux.</li>
+      <li>To get the most out of Cyberpunk 2077, we need a few mods:
+        <ul>
+          <li>Use Protontricks and add "d3dcompiler_47.dll" to cyberpunk 2077</li>
+          <li>How to make ReShade effects work in VR (Enable in the R.E.A.L-Reshade-Settings: FXAA and ColorLabs): <a href="https://www.patreon.com/posts/63441060">https://www.patreon.com/posts/63441060</a></li>
+          <li>Disable TAA and Bloom: <a href="https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description</a></li>
+          <li>General Optimization: <a href="https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description</a></li>
+          <li>Set the resolution as close as possable to the resolution of your headset (In the R.E.A.L-Settings).</li>
+        </ul>
+      </li>
       <li>Optionally, you can increase performance and frame time by a good amount by running <u><i>sudo setcap CAP_SYS_NICE=eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u>. BUT this could break all controller support for good (e.g. in Cyberpunk or for racing sims and later for VR controllers!). To remove it, just run: <u><i>sudo setcap CAP_SYS_NICE-eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u></li>
       <li>If something does not work, you can find the log for it at: "/home/###YOUR_USERNAME###/.steam/steam/logs/vrserver.txt"</li>
       <li>If something does not work with SteamVR, you can try OpenComposite. Run the monado-service in the terminal and start a Steam game with these startup options (DON'T CHANGE THEM! THIS WILL WORK FOR ANY KIND OF !DEFAULT! STEAM INSTALLATION!): "VR_OVERRIDE=/run/host/usr/share/opencomposite XR_RUNTIME_JSON=/run/host/usr/share/openxr/1/openxr_monado.json PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/monado_comp_ipc %command%"</li>
@@ -265,6 +274,11 @@ holographic : /home/###YOUR_USERNAME###/.local/share/Steam/steamapps/common/Mixe
       <li><a href="https://github.com/OpenHMD/OpenHMD/wiki/Udev-rules-list">https://github.com/OpenHMD/OpenHMD/wiki/Udev-rules-list</a></li>
       <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2805545613">https://steamcommunity.com/sharedfiles/filedetails/?id=2805545613</a></li>
       <li><a href="https://github.com/microsoft/onnxruntime/releases/">https://github.com/microsoft/onnxruntime/releases/</a></li>
+      <li><a href="https://www.patreon.com/posts/63441060">https://www.patreon.com/posts/63441060</a></li>
+      <li><a href="https://www.reddit.com/r/linux_gaming/comments/i3md9w/getting_reshade_to_work_on_proton/">https://www.reddit.com/r/linux_gaming/comments/i3md9w/getting_reshade_to_work_on_proton/</a></li>
+      <li><a href="https://youtu.be/D_qJ5ak6Pt8">https://youtu.be/D_qJ5ak6Pt8</a></li>
+      <li><a href="https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description</a></li>
+      <li><a href="https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description</a></li>
     </ul>
     <h5>2023.11.30 - 19:30</h5>
   </body>
