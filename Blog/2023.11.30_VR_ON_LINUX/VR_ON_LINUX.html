@@ -40,7 +40,7 @@
       <li>Cyberpunk 2077 R.E.A.L. VR Mod from LukeRoss [<a href="https://www.patreon.com/realvr">https://www.patreon.com/realvr</a>]</li>
     </ul>
     <hr>
-    <h2><u><b>How to installed everything</b></u>:</h2>
+    <h2><u><b>How I installed everything</b></u>:</h2>
     <p>I tried it on OpenSuse first, but some libraries are compiled incorrectly for this usecase there, which makes it hard to get everything working. So I am using Arch Linux for this. The scripts in the AUR are unfortunately not very good. A lot of dependencies are missing, this means you have to read every error output during installation for the missing dependencies / read the comments under the PKGBUILD page and add them yourself to the system.</p>
     <p> This video by one of the developers (I think) can help you get started; <a href="https://youtu.be/Oqla04P_2QA">https://youtu.be/Oqla04P_2QA</a>. This is what I did to install everything correctly:</p>
     <ol>
@@ -207,11 +207,11 @@ holographic : /home/###YOUR_USERNAME###/.local/share/Steam/steamapps/common/Mixe
         <ul>
           <li>Use Protontricks and add "d3dcompiler_47.dll" to cyberpunk 2077</li>
           <li>How to make ReShade effects work in VR (Enable in the R.E.A.L-Reshade-Settings: FXAA, FakeHDR and ColorLabs): <a href="https://www.patreon.com/posts/63441060">https://www.patreon.com/posts/63441060</a></li>
-          <li>Disable TAA and Bloom: <a href="https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description</a></li>
+          <li>Disable TAA and Bloom (ONLY IF YOU CANNOT HANDLE THE GHOSTING ARTEFACTS AROUND MOVING OBJECTS. I think the pros outweigh the cons of TAA. Looks so much better with it! Try without this mod and if it bothers you, use it.): <a href="https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/63?tab=description</a></li>
           <li>General Optimization: <a href="https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description">https://www.nexusmods.com/cyberpunk2077/mods/786?tab=description</a></li>
           <li>Set the resolution to around 2400 if your hardware can do that (In the R.E.A.L-Settings).</li>
           <li>In the R.E.A.L-Settings under "Advanced", set the "Render Mode" to "1/2" or "Legacy AER". What feels better to you. Or "AER 2.0" if your Nvidia card supports it. This is the currently best setting.</li>
-          <li>In the Cyberpunk 2077 Settings set "Crowd Density" to high.</li>
+          <li>In the Cyberpunk 2077 Settings set "Crowd Density" to high and FSR to Quality (or even better, use DLSS if you have Nvidia).</li>
         </ul>
       </li>
       <li>Optionally, you can increase performance and frame time by a good amount by running <u><i>sudo setcap CAP_SYS_NICE=eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u>. BUT this could break all controller support for good (e.g. in Cyberpunk or for racing sims and later for VR controllers!). To remove it, just run: <u><i>sudo setcap CAP_SYS_NICE-eip ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher</i></u></li>
