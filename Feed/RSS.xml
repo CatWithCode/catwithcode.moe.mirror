@@ -15,22 +15,6 @@
         </item>
         -->
         <item>
-            <title>Unpack, Repack and Resign APKs/APPs</title>
-            <link>https://catwithcode.moe/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html</link>
-            <description>
-            Sometimes it can be useful to make modifications to an Apps AndroidManifest.xml.
-            https://catwithcode.moe/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html
-            </description>
-        </item>
-        <item>
-            <title>Force/Manual Update on KaiOS Nokia-Phones</title>
-            <link>https://catwithcode.moe/Blog/2022.05.03-03_Nokia_Force_Update/Nokia_Force_Update.html</link>
-            <description>
-            I had bought a Nokia 2720 Flip with KaiOS on it
-            https://catwithcode.moe/Blog/2022.05.03-03_Nokia_Force_Update/Nokia_Force_Update.html
-            </description>
-        </item>
-        <item>
             <title>MonoGame with MGCB-Editor on a Rolling-Release Linux Distros</title>
             <link>https://catwithcode.moe/Blog/2022.05.03-02_MonoGame_MGCB_Linux_Error/MonoGame_MGCB_Linux_Error.html</link>
             <description>
