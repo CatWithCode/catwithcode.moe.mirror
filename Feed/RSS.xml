@@ -12,9 +12,14 @@
         </item>
         -->
         <item>
-            <title>Hello World</title>
-            <link>https://catwithcode.moe/Blog/2022.05.02_Hello_World/Hello_World.html</link>
-            <description>This is my first website-Content i ever made.</description>
+            <title>TITEL</title>
+            <link>LINK</link>
+            <description>TEXT</description>
+        </item>
+        <item>
+            <title>MonoGame with MGCB-Editor on a Rolling-Release Linux Distros</title>
+            <link>https://catwithcode.moe/Blog/2022.05.03-02_MonoGame_MGCB_Linux_Error/MonoGame_MGCB_Linux_Error.html</link>
+            <description>If you get the following Error when you are trying to use the MGCB-Editor:</description>
         </item>
     </channel>
 </rss> 
