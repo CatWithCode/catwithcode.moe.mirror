@@ -15,6 +15,30 @@
         </item>
         -->
         <item>
+            <title>Microphone to Speaker passthrough on Linux/WSL</title>
+            <link>https://catwithcode.moe/Blog/2022.05.15_Microphone_to_Speaker/Microphone_to_Speaker.html</link>
+            <description>
+            Sometimes you want to use a device and watch a video at the same time and you need to use headphones. In such cases it would be useful to pass the sound through your computer to your headphones without some sort of external mixing because reasons.
+            https://catwithcode.moe/Blog/2022.05.15_Microphone_to_Speaker/Microphone_to_Speaker.html
+            </description>
+        </item>
+        <item>
+            <title>Unpack, Repack and Resign APKs/APPs</title>
+            <link>https://catwithcode.moe/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html</link>
+            <description>
+            Sometimes it can be useful to make modifications to an Apps AndroidManifest.xml.
+            https://catwithcode.moe/Blog/2022.05.08_Unpack_Repack_Resign_APK/Unpack_Repack_Resign_APK.html
+            </description>
+        </item>
+        <item>
+            <title>Force/Manual Update on KaiOS Nokia-Phones</title>
+            <link>https://catwithcode.moe/Blog/2022.05.03-03_Nokia_Force_Update/Nokia_Force_Update.html</link>
+            <description>
+            I had bought a Nokia 2720 Flip with KaiOS on it
+            https://catwithcode.moe/Blog/2022.05.03-03_Nokia_Force_Update/Nokia_Force_Update.html
+            </description>
+        </item>
+        <item>
             <title>MonoGame with MGCB-Editor on a Rolling-Release Linux Distros</title>
             <link>https://catwithcode.moe/Blog/2022.05.03-02_MonoGame_MGCB_Linux_Error/MonoGame_MGCB_Linux_Error.html</link>
             <description>
