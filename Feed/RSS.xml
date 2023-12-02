@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>CatWithCode - Home</title>
+        <link>https://catwithcode.moe/</link>
+        <description>Blog for random computer stuff from my daily life. Girl from Germany. Work as a Software Developer. Programming, Linux, Hacking, Modding and tinkering.</description>
+        <!--
+        <item>
+            <title>TITEL</title>
+            <link>LINK</link>
+            <description>TEXT</description>
+        </item>
+        -->
+        <item>
+            <title>Hello World</title>
+            <link>https://catwithcode.moe/Blog/2022.05.02_Hello_World/Hello_World.html</link>
+            <description>This is my first website-Content i ever made.</description>
+        </item>
+    </channel>
+</rss> 
