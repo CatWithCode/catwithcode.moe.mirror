@@ -10,14 +10,18 @@
   <lastmod>2023-10-07T12:00:11+00:00</lastmod>
 </url>
 <url>
+  <loc>https://catwithcode.moe/Feed/RSS.xml</loc>
+  <lastmod>2023-12-02T21:40:11+00:00</lastmod>
+</url>
+<url>
+  <loc>https://catwithcode.moe/blog.html</loc>
+  <lastmod>2023-12-02T21:40:11+00:00</lastmod>
+</url>
+<url>
   <loc>https://catwithcode.moe/index.html</loc>
   <lastmod>2023-10-07T12:00:11+00:00</lastmod>
 </url>
 <url>
-  <loc>https://catwithcode.moe/blog.html</loc>
-  <lastmod>2023-11-30T19:00:11+00:00</lastmod>
-</url>
-<url>    
   <loc>https://catwithcode.moe/privacy.html</loc>
   <lastmod>2023-10-07T12:00:11+00:00</lastmod>
 </url>
@@ -180,6 +184,10 @@
 <url>
   <loc>https://catwithcode.moe/Blog/2023.11.30_VR_ON_LINUX/VR_ON_LINUX.html</loc>
   <lastmod>2023-11-30T19:00:11+00:00</lastmod>
+</url>
+<url>
+  <loc>https://catwithcode.moe/Blog/2023.12.02_CatWithCode_RSS-Feed/CatWithCode_RSS-Feed.html</loc>
+  <lastmod>2023-12-02T21:40:11+00:00</lastmod>
 </url>
 
 </urlset>

@@ -14,6 +14,8 @@ document.write('\
     <b>&nbsp;</b>\
     <a href="/contact.html">CONTACT</a> \
     <b>&nbsp;</b>\
+    <a href="https://catwithcode.moe/Feed/RSS.xml">📡&nbsp;RSS</a>\
+    <b>&nbsp;</b>\
     </h2>\
     <br>\
     <br>\
