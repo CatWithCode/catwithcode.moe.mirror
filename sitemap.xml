@@ -11,11 +11,11 @@
 </url>
 <url>
   <loc>https://catwithcode.moe/Feed/RSS.xml</loc>
-  <lastmod>2023-12-02T21:40:11+00:00</lastmod>
+  <lastmod>2023-12-07T17:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/blog.html</loc>
-  <lastmod>2023-12-02T21:40:11+00:00</lastmod>
+  <lastmod>2023-12-07T17:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/index.html</loc>
@@ -183,11 +183,15 @@
 </url>
 <url>
   <loc>https://catwithcode.moe/Blog/2023.11.30_VR_ON_LINUX/VR_ON_LINUX.html</loc>
-  <lastmod>2023-11-30T19:00:11+00:00</lastmod>
+  <lastmod>2023-12-07T17:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/Blog/2023.12.02_CatWithCode_RSS-Feed/CatWithCode_RSS-Feed.html</loc>
   <lastmod>2023-12-02T21:40:11+00:00</lastmod>
+</url>
+<url>
+  <loc>https://catwithcode.moe/Blog/2023.12.07_FIx_USB_NO_DATA_ONLY_POWER/FIx_USB_NO_DATA_ONLY_POWER.html</loc>
+  <lastmod>2023-12-07T17:00:11+00:00</lastmod>
 </url>
 
 </urlset>

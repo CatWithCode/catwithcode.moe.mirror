@@ -15,6 +15,14 @@
         </item>
         -->
         <item>
+            <title>CatWithCode - Fix: USB has only Power and No Data on Linux</title>
+            <link>https://catwithcode.moe/Blog/2023.12.07_FIx_USB_NO_DATA_ONLY_POWER/FIx_USB_NO_DATA_ONLY_POWER.html</link>
+            <description>On my "GIGABYTE X670 GAMING X AX" I could not use my front USB ports after the last kernel update on Arch or OpenSUSE Linux. I found a fix in a post in the ArchWiki by "waste37" and this is how I used it.
+
+            https://catwithcode.moe/Blog/2023.12.07_FIx_USB_NO_DATA_ONLY_POWER/FIx_USB_NO_DATA_ONLY_POWER.html
+            </description>
+        </item>
+        <item>
             <title>CatWithCode - Finally! RSS-Feed for CatWithCode.moe</title>
             <link>https://catwithcode.moe/Blog/2023.12.02_CatWithCode_RSS-Feed/CatWithCode_RSS-Feed.html</link>
             <description>RSS-Feed for my Blog! You are currently reading it :D.
