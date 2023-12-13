@@ -110,4 +110,10 @@ https://github.com/antijingoist/opendyslexic
     /* # - - Styling: */
     background-color: var(--header);
 }
+
+/* # - Header-Content-Spacing: */
+.Header-Border b {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 /* # # # */
