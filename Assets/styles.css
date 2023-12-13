@@ -57,7 +57,7 @@ https://github.com/antijingoist/opendyslexic
 /* # General Settings:
 # - Global Font and Color:*/
 * {
-    /* Font and Text: */
+    /* # - Font and Text: */
     font-family: 'opendyslexic', 'Courier New', 'monospace';
     background-color: #19181b;
     color: #f5f5fa;
@@ -70,3 +70,17 @@ https://github.com/antijingoist/opendyslexic
     image-rendering: -webkit-optimize-contrast;
     -ms-interpolation-mode: nearest-neighbor;
 }
+
+/* # Header: */
+.Header {
+    position: fixed;     
+    text-align: center;    
+    top: 0px; 
+    width: 100%;
+}
+
+/* # - Header-Content: */
+.Header  *{
+    background-color: #232225;
+}
+/* # # # */
