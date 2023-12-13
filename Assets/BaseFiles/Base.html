@@ -14,11 +14,11 @@
     }
   </script>
   <head>
-    <script src="/Assets/GetHead.js"></script>
+    <script src="/Assets/GetHead.js" type="text/javascript"></script>
     <title>CatWithCode - TITEL</title>
   </head>
   <body align="left" onload="createiFrame()">
-    <script src="/Assets/GetTopBar.js"></script>
+    <script type="text/javascript">WriteHeader();</script>
     
     <h1>Titel</h1>
     <p>Text</p>
@@ -42,6 +42,6 @@
     <ul>
       <li><a href="">Link</a></li>
     </ul>
-    <h5>0000.00.00 - 00:00</h5>
+    <script type="text/javascript">WriteFooter("0000.00.00 - 00:00");</script>
   </body>
 </html>

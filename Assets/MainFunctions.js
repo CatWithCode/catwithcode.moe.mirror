@@ -1,0 +1,34 @@
+function WriteHeader() {
+    document.write('<div class="Header">\
+            <h2 class="Header-Border" align="center">\
+                <a href="/"> <img src="/Assets/favicon.png" alt="Cute Pixelart Catgirl" style="width:55px;height:55px";></a>\
+                <a href="/">CatWithCode</a>\
+                <br>\
+                <br>\
+                <b>&nbsp;</b>\
+                <a href="/blog.html">BLOG</a>\
+                <b>&nbsp;</b>\
+                <a href="/privacy.html">PRIVACY</a>\
+                <b>&nbsp;</b>\
+                <a href="/license.html">LICENSE</a>\
+                <b>&nbsp;</b>\
+                <a href="/contact.html">CONTACT</a>\
+                <b>&nbsp;</b>\
+                <a href="https://catwithcode.moe/Feed/RSS.xml">📡&nbsp;RSS</a>\
+                <b>&nbsp;</b>\
+            </h2>\
+        </div>\
+    ');
+}
+
+function WriteFooter(dateText) {
+    var output = '<h5 class="Fooder">'
+        .concat(dateText) // Date
+            .concat('&nbsp;&nbsp;|&nbsp;&nbsp;')
+                .concat('© CatWithCode') // Maker
+                    .concat('&nbsp;&nbsp;|&nbsp;&nbsp;')
+                        .concat('CC BY-NC-ND 4.0') // License
+                            .concat('</h5>');
+                            
+    document.write(output);
+}

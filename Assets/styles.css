@@ -59,7 +59,7 @@ https://github.com/antijingoist/opendyslexic
 :root {
     --background: #19181b;
     --foreground: #f5f5fa;
-    --header: #252429;
+    --header: #161618;
 }
 
 /* # - Global Font and Color:*/
@@ -78,42 +78,74 @@ https://github.com/antijingoist/opendyslexic
     -ms-interpolation-mode: nearest-neighbor;
 }
 
+/* # - Body: */
+body {
+    /* # - Footer-Spacing (Fill Space in between):*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
-/* # Header: */
+}
+
+/* # - Header: */
 .Header {
-    /* # - Styling: */
+    /* # - - Styling: */
     width: 100%;
+
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: auto;
-    border-radius: 0px 0px 25px 25px;
-    border-bottom: 1px solid var(--foreground);
 }
 
 /* # - - Header-Border: */
 .Header-Border {
-    /* # - - Position: */
+    /* # - - - Position: */
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 
-    /* # - - Styling: */
+    padding-bottom: 25px;
+
+    /* # - - - Styling: */
     background-color: var(--header);
+
     border-radius: 0px 0px 25px 25px;
     border-bottom: 1px solid var(--foreground);
 }
 
-/* # - Header-Content: */
+/* # - - Header-Content: */
 .Header-Border * {
-    /* # - - Styling: */
+    /* # - - - Styling: */
     background-color: var(--header);
 }
 
-/* # - Header-Content-Spacing: */
-.Header-Border b {
+/* # - Fooder: */
+.Fooder {
+        /* # - - Position: */
+        margin-top: auto;
+        
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+
+        /* # - - Styling: */
+        text-align: center;
+        background-color: var(--header);
+    
+        border-radius: 25px 25px 0px 0px;
+        border-top: 1px solid var(--foreground);
+}
+
+/* # - - Fooder-Content: */
+.Fooder * {
+    /* # - - - Spacing from Border*/
     margin-left: 25px;
     margin-right: 25px;
+    margin-bottom: 0px;
+    
+    /* # - - - Styling: */
+    background-color: var(--header);
 }
 /* # # # */
