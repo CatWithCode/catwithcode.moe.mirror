@@ -82,8 +82,9 @@ https://github.com/antijingoist/opendyslexic
 body {
     /* # - Footer-Spacing (Fill Space in between):*/
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    display: flex;
+    flex-direction: column;
+  
 }
 
 /* # - Header: */
@@ -117,7 +118,7 @@ body {
 /* # - - Header-Content: */
 .Header-Border * {
     /* # - - - Styling: */
-    background-color: var(--header);
+    background-color: var(--header);    
 }
 
 /* # - Fooder: */
