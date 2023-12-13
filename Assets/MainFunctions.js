@@ -25,7 +25,7 @@ function WriteFooter(dateText) {
     var output = '<h5 class="Fooder">'
         .concat(dateText) // Date
             .concat('&nbsp;&nbsp;|&nbsp;&nbsp;')
-                .concat('© CatWithCode') // Maker
+                .concat('©️ CatWithCode') // Maker
                     .concat('&nbsp;&nbsp;|&nbsp;&nbsp;')
                         .concat('CC BY-NC-ND 4.0') // License
                             .concat('</h5>');
