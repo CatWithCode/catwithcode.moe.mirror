@@ -84,7 +84,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
 /* # - Header: */
@@ -106,7 +105,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 
-    padding-bottom: 25px;
+    /*padding-bottom: 25px;*/
 
     /* # - - - Styling: */
     background-color: var(--header);
@@ -125,10 +124,6 @@ body {
 .Fooder {
         /* # - - Position: */
         margin-top: auto;
-        
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
 
         /* # - - Styling: */
         text-align: center;
@@ -144,7 +139,7 @@ body {
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 0px;
-    
+
     /* # - - - Styling: */
     background-color: var(--header);
 }
