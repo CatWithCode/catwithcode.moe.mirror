@@ -70,12 +70,12 @@ https://github.com/antijingoist/opendyslexic
     color: var(--foreground);
 
     /* Images and Pixelart Fixes (with some browser-engine specific fixes... I think): */
-    image-rendering: optimizeSpeed;
+    /* image-rendering: optimizeSpeed;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
+    -ms-interpolation-mode: nearest-neighbor; */
 }
 
 /* # - Body: */
