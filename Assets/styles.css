@@ -81,10 +81,6 @@ https://github.com/antijingoist/opendyslexic
 
 /* # Header: */
 .Header {
-    /* # - Position: */
-    position: fixed;     
-    text-align: center;
-
     /* # - Styling: */
     width: 100%;
     top: 0px;
