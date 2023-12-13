@@ -54,13 +54,20 @@ https://github.com/antijingoist/opendyslexic
 }
 /* # # # */
 
-/* # General Settings:
-# - Global Font and Color:*/
+/* # General Settings: 
+# - Variables: */
+:root {
+    --background: #19181b;
+    --foreground: #f5f5fa;
+    --header: #252429;
+}
+
+/* # - Global Font and Color:*/
 * {
     /* # - Font and Text: */
     font-family: 'opendyslexic', 'Courier New', 'monospace';
-    background-color: #19181b;
-    color: #f5f5fa;
+    background-color: var(--background);
+    color: var(--foreground);
 
     /* Images and Pixelart Fixes (with some browser-engine specific fixes... I think): */
     image-rendering: optimizeSpeed;
@@ -71,16 +78,40 @@ https://github.com/antijingoist/opendyslexic
     -ms-interpolation-mode: nearest-neighbor;
 }
 
+
 /* # Header: */
 .Header {
+    /* # - Position: */
     position: fixed;     
-    text-align: center;    
-    top: 0px; 
+    text-align: center;
+
+    /* # - Styling: */
     width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    border-radius: 0px 0px 25px 25px;
+    border-bottom: 1px solid var(--foreground);
+}
+
+/* # - - Header-Border: */
+.Header-Border {
+    /* # - - Position: */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* # - - Styling: */
+    background-color: var(--header);
+    border-radius: 0px 0px 25px 25px;
+    border-bottom: 1px solid var(--foreground);
 }
 
 /* # - Header-Content: */
-.Header  *{
-    background-color: #232225;
+.Header-Border * {
+    /* # - - Styling: */
+    background-color: var(--header);
 }
 /* # # # */

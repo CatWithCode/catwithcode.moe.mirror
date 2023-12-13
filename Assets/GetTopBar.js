@@ -1,5 +1,5 @@
 document.write('    <div class="Header">\
-        <h2 align="center">\
+        <h2 class="Header-Border" align="center">\
             <a href="/"> <img src="/Assets/favicon.png" alt="Cute Pixelart Catgirl" style="width:55px;height:55px";></a>\
             <a href="/">CatWithCode</a>\
             <br>\
