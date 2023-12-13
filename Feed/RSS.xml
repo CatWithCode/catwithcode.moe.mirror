@@ -16,6 +16,14 @@
         -->
         <item>
             <title>CatWithCode - Fix: USB has only Power and No Data on Linux</title>
+            <link>https://catwithcode.moe/Blog/2023.12.13_404_Page_Added/404_Page_Added.html</link>
+            <description>More preporeations for the soon coming design changes. If you want to see it: https://catwithcode.moe/404.html
+
+            https://catwithcode.moe/Blog/2023.12.13_404_Page_Added/404_Page_Added.html
+            </description>
+        </item>
+        <item>
+            <title>CatWithCode - Fix: USB has only Power and No Data on Linux</title>
             <link>https://catwithcode.moe/Blog/2023.12.07_FIx_USB_NO_DATA_ONLY_POWER/FIx_USB_NO_DATA_ONLY_POWER.html</link>
             <description>On my "GIGABYTE X670 GAMING X AX" I could not use my front USB ports after the last kernel update on Arch or OpenSUSE Linux. I found a fix in a post in the ArchWiki by "waste37" and this is how I used it.
 

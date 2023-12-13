@@ -57,7 +57,16 @@ https://github.com/antijingoist/opendyslexic
 /* # General Settings:
 # - Global Font and Color:*/
 * {
+    /* Font and Text: */
     font-family: 'opendyslexic', 'Courier New', 'monospace';
     background-color: #19181b;
     color: #f5f5fa;
+
+    /* Images and Pixelart Fixes (with some browser-engine specific fixes... I think): */
+    image-rendering: optimizeSpeed;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
 }

@@ -70,7 +70,12 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
     <p>
     <p>
       <ul>
+        <p>Stock and other Rom's:</p>
         <li><u><i>adb shell settings put system min_refresh_rate 90</i></u></li>
+        <li><u><i>adb shell settings put system peak_refresh_rate 90</i></u></li>
+        <br>
+        <p>On /e/OS (Bugged at the time of writing. Could already be fixed):</p>
+        <li><u><i>adb shell settings put system min_refresh_rate 60</i></u></li>
         <li><u><i>adb shell settings put system peak_refresh_rate 90</i></u></li>
       </ul>
     </p>
@@ -80,6 +85,7 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
     <hr>
     <h2><u>Installing /e/OS</u>:</h2>
     <p>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you:</p>
+    <p>There are stable builds, which is updated every few months, and a dev builds, which is updated once or twice a month and can be viewed like LineageOS Nightly-Builds. Pick your poison. I use dev. Switching between dev and stable is possible, but not recommended by the creators of /e/OS (so much so that you will find NOTHING on how to do it for them). I have added how to do it to this blog post. Your welcome :3.</p>
     <a href="https://doc.e.foundation/devices/FP5/install">https://doc.e.foundation/devices/FP5/install</a>
     <br>
     <a href="https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/">https://murena.com/shop/smartphones/brand-new/murena-fairphone-5/</a>
