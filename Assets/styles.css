@@ -105,7 +105,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 
-    /*padding-bottom: 25px;*/
+    padding-bottom: 25px;
 
     /* # - - - Styling: */
     background-color: var(--header);
@@ -117,34 +117,37 @@ body {
 /* # - - Header-Content: */
 .Header-Border * {
     /* # - - - Styling: */
-    background-color: var(--header);    
+    background-color: var(--header);
 }
 
 /* # - Fooder: */
 .Fooder {
-        /* # - - Position: */      
-        margin-top: auto;  
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0x;
-        padding-bottom: 0px;
+    /* # - - Position: */      
+    margin-top: auto;  
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 
-        /* # - - Styling: */
-        text-align: center;
-        background-color: var(--header);
-    
-        border-radius: 25px 25px 0px 0px;
-        border-top: 1px solid var(--foreground);
-        border-left: 1px solid var(--foreground);
-        border-right: 1px solid var(--foreground);
+    padding-bottom: 0px;
+
+    /* # - - Styling: */
+    text-align: center;
+    background-color: var(--header);
+
+    border-radius: 25px 25px 0px 0px;
+
+    border-top: 1px solid var(--foreground);
+    border-left: 1px solid var(--foreground);
+    border-right: 1px solid var(--foreground);
 }
 
 /* # - - Fooder-Content: */
 .Fooder * {
     /* # - - - Spacing from Border*/
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0x;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    margin-bottom: 0px;
     padding-bottom: 0px;
 
     /* # - - - Styling: */
