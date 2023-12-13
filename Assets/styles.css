@@ -140,10 +140,10 @@ body {
 /* # - - Fooder-Content: */
 .Fooder * {
     /* # - - - Spacing from Border*/
-    margin-top: auto;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0x;
+    padding-bottom: 0px;
 
     /* # - - - Styling: */
     background-color: var(--header);
