@@ -82,8 +82,8 @@ https://github.com/antijingoist/opendyslexic
 body {
     /* # - Footer-Spacing (Fill Space in between):*/
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 /* # - Header: */
@@ -122,8 +122,12 @@ body {
 
 /* # - Fooder: */
 .Fooder {
-        /* # - - Position: */
-        margin-top: auto;
+        /* # - - Position: */      
+        margin-top: auto;  
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0x;
+        padding-bottom: 0px;
 
         /* # - - Styling: */
         text-align: center;
@@ -136,6 +140,7 @@ body {
 /* # - - Fooder-Content: */
 .Fooder * {
     /* # - - - Spacing from Border*/
+    margin-top: auto;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 0px;
