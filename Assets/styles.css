@@ -81,7 +81,7 @@ https://github.com/antijingoist/opendyslexic
 /* # - Body: */
 body {
     /* # - Footer-Spacing (Fill Space in between):*/
-    min-height: 98.9vh; /* May need to be lowered. Prevents scrolling from filling the space between the footer and body content. */
+    min-height: 98vh; /* May need to be lowered. Prevents scrolling from filling the space between the footer and body content. */
     display: flex;
     flex-direction: column;  
 }
