@@ -1,20 +1,26 @@
 // Public Functions:
 
-// Reading and Writing Page-Header:
-function WriteHeader() {
-    document.write(loadFile('/Assets/BaseFiles/TopBar.html'));
+// Creating Page-Header:
+async function WriteHeader() {
+    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/TopBar.html');
 }
 
-// Reading and Writing Footer-Header:
-function WriteFooter(dateText) {
-    document.write(loadFile('/Assets/BaseFiles/Footer.html').replace("###DATE_TEXT###", dateText));
+// Creating Footer-Header:
+async function WriteFooter(dateText) {
+    document.getElementById("Footer").innerHTML = (await this.aSyncLoadFile('/Assets/BaseFiles/Footer.html')).replace("###DATE_TEXT###", dateText);
 }
 
 
 // Internel Functions:
+// Loads File from a desired location asynchronously:
+async function aSyncLoadFile(filePath) {
+    return fetch(filePath)
+        .then((response)=>response.text())
+        .then((responseText)=>{return responseText});
+}
 
-// Loads files from a desired location:
-function loadFile(filePath) {
+// Loads File from a desired location synchronised:
+function syncLoadFile(filePath) {
     // Creating Request:
     var xmlhttp = new XMLHttpRequest();
 
