@@ -91,10 +91,15 @@ body {
     /* # - - Styling: */
     width: 100%;
 
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /* # - - Header-Border: */
@@ -105,8 +110,10 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 
-    /* Make sure the Header-Text does not overlap the border: */
-    padding-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 25px; /* Make sure the Header-Text does not overlap the border. */
 
     /* # - - - Styling: */
     background-color: var(--header);
