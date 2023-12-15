@@ -2,28 +2,18 @@
 
 // Reading and Writing Page-Header:
 function WriteHeader() {
-    var test = loadFile('/Assets/BaseFiles/TopBar.html')
-
-    if(test != null){
-        document.write(loadFile('/Assets/BaseFiles/TopBar.html'));
-    } else {
-
-    }
+    document.write(loadFile('/Assets/BaseFiles/TopBar.html'));
 }
 
 // Reading and Writing Footer-Header:
 function WriteFooter(dateText) {
-    var test = loadFile('/Assets/BaseFiles/TopBar.html')
-
-    if(test != null){
-        document.write(loadFile('/Assets/BaseFiles/Footer.html').replace("###DATE_TEXT###", dateText));
-    } else {
-
-    }
+    document.write(loadFile('/Assets/BaseFiles/Footer.html').replace("###DATE_TEXT###", dateText));
 }
 
 
 // Internel Functions:
+
+// Loads files from a desired location:
 function loadFile(filePath) {
     // Creating Request:
     var xmlhttp = new XMLHttpRequest();
@@ -35,7 +25,5 @@ function loadFile(filePath) {
     // Retrun if the File was found, else do fallback:
     if (xmlhttp.status==200) {
         return xmlhttp.responseText;
-    } else {
-        return null;
     }
   }
