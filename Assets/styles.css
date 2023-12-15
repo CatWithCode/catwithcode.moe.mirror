@@ -81,7 +81,7 @@ https://github.com/antijingoist/opendyslexic
 /* # - Body: */
 body {
     /* # - Footer-Spacing (Fill Space in between):*/
-    min-height: 98vh;
+    min-height: 98.6875vh;
     display: flex;
     flex-direction: column;  
 }
