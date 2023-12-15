@@ -26,4 +26,4 @@ function loadFile(filePath) {
     if (xmlhttp.status==200) {
         return xmlhttp.responseText;
     }
-  }
+}
