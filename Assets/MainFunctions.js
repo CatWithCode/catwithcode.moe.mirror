@@ -2,7 +2,7 @@
 
 // Creating Page-Header:
 async function WriteHeader() {
-    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/TopBar.html');
+    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Header.html');
 }
 
 // Creating Footer-Header:
