@@ -11,11 +11,11 @@
 </url>
 <url>
   <loc>https://catwithcode.moe/Feed/RSS.xml</loc>
-  <lastmod>2023-12-29T15:00:11+00:00</lastmod>
+  <lastmod>2024-01-03T15:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/blog.html</loc>
-  <lastmod>2023-12-29T15:00:11+00:00</lastmod>
+  <lastmod>2024-01-03T15:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/index.html</loc>
@@ -208,6 +208,10 @@
 <url>
   <loc>https://catwithcode.moe/Blog/2023.12.29_NewDesignIsHere/NewDesignIsHere.html</loc>
   <lastmod>2023-12-29T15:00:11+00:00</lastmod>
+</url>
+<url>
+  <loc>https://catwithcode.moe/Blog/2024.01.03_Linux_VIA/Linux_VIA.html</loc>
+  <lastmod>2024-01-03T15:00:11+00:00</lastmod>
 </url>
 
 </urlset>
