@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/Assets/GetHead.js" type="text/javascript"></script>
+    <title>CatWithCode - Retro Compaq Sleeper PC [RX 7900XT, Ryzen 9 7900X, 32GB DDR5 RAM @ 6000mhz]</title>
+  </head>
+  <body align="left">
+    <div id="Header"><script type="text/javascript">WriteHeader();</script></div>
+    
+    <h1>My Retro Compaq Sleeper PC with a AMD Radeon RX 7900XT, Ryzen 9 7900X, 32GB DDR5 RAM @ 6000mhz and a 1000W PSU</h1>
+    <div class="centredItems">
+      <a href="DATA/Main.jpg"><img src="DATA/Main.jpg" alt="Main Image of the Blog Post. Sleeper PC with cute siamese cat on it sleeping." style="width:40%;";></a>
+      <h5><i>More images at the bottom of the blog post!</i></h5>
+    </div>
+    <br>
+    <p>I have collected a few old computers and "retro" consoles over the years. Recently I found a Compaq Prolinea 575e at my local recycling center. It is nothing special, just an old x86 computer that was not selling very well at the time. It looked all right from the outside, so I talked to the people there and took it home. Inside, the hardware was... well... some capacitors were not feeling well and puked their fluids all over the place. In short, the hardware was completely f*cked. But the case was still in ok condition and I decided to clean it up as much as possible and, if it looked decent after that, I would make it my new PC case.</p>
+    <p>This is not going to be a HowTO or something. I will post some drawings of what I had to do to make the case usable and some pictures and the hardware I used, but to replicate this you will have to make all the measurements yourself because it is such a compact and optimised build and it cannot be made generic to fit any hardware.</p>
+    <p>After removing the dead hardware and cleaning everything, it was time to plan. I was able to fit the following hardware:</p>
+    <ul>
+      <p><u><b>Main Hardware</b></u>:</p>
+      <li>AMD Ryzen 9 7900X</li>
+      <li>MSI MPG B650I EDGE WIFI - Mini-ITX</li>
+      <li>AMD Radeon RX 7900 XT - Reference Design</li>
+      <li>32GB DDR5 RAM @ 6000mhz</li>
+      <li>PURE POWER 11 FM - 1000W - ATX-PSU</li>
+      <li>1x 1TB M.2 SSD from Samsung</li>
+      <li>1x 1TB SATA SSD also from Samsung</li>
+      <p><u><b>Other Hardware</b></u>:</p>
+      <li>be quiet! Pure Loop 2 120mm</li>
+      <li>Asus BW-16D1HT UHD Blu-Ray-Drive ;)</li>
+      <li>EZDIY-FAB PCIE-Riser Gen 4 16x - 30CM</li>
+      <li>Floppy to USB-FrontPanal</li>
+      <li>7x Noctua NF-A4x20 (Yes... 7. xD)</li>
+      <li>PC building parts (screws, mainboard mounting hardware, front panel connectors, ...)</li>
+      <li>PSU mainboard POWER connector extension (needed because most mainboard power connectors are too rigid and often have hardware in the connector that makes them too high.).</li>
+      <p><u><b>You will need at least the following tools</b></u>:</p>
+      <li>A metal and plastic cutting tool.</li>
+      <li>A cordless screwdriver with metal drills</li>
+      <li>Soldering Iron</li>
+      <li>PC building parts (Screws, Mainboard mounting hardware, front panel conectors, ...)</li>
+      <li>Around 3 days of time</li>
+      <li>Screwdriver</li>
+      <li>"Old PC white" looking spraypaint</li>
+    </ul>
+    <p>I had to drill about 13 small holes to mount the small fans. The other half of the holes for the fans were already drilled in the case from the factory. There are 5 fans in the lower front and they draw air in from the air holes in the front. One is also above the leftmost one (there is a hole in the front panel that allows air to come to it from below) and one fan in the rear left of the case. There is only enough room for one next to the mainboard. The mainboard is fitted as far to the right as the mainboard's back panel will allow. To mount the mainboard, I had to drill 4 holes in the base plate and remove all the metal parts that protrude from the back panel. The hole connecting the left and right chambers had to be widened and everything vertical to the top bar (The horizontal part could stay) had to be removed to fit the PCIE riser connector. For many PSUs, the right side of the CD and Flopy-Drive ?tray? has to be cut off, because at least one connector is too close to it. For the PSU itself, it was necessary to cut the plastic and metal to allow airflow and access to the connectors. The UHD Blu-Ray drive ;) is mounted in the front with the help of two metal plates, the floppy drive is replaced with a USB-C adapter and the old plastic is cut off so that the left and right sides are closed of. Finally, the CPU cooler was chosen because of the flexible tube exits on the block, and the pump is on the tube and only on one side (the right tube just goes through a hole and is movable). I had to cut a large and very carefully measured hole in the base plate and mounted the cooler over it, with the fan to draw air through the cooler. All the fans are intake fans, except for the PSU-Fan and the fan next to the mainboard. In short, the thermal design is designed for high pressure. The hot air SHOULD be pushed out by all the incoming cool air (and the PSU and the one fan at the back will direct the air). The GPU is mounted using the existing PCIE bracket in the back and a small metal bracket holds the GPU tightly to one of the original HDD brackets. It is a good idea to add a counter-screw to the back of the used screw hole in case the nut ever comes loose from vibration and falls off. The PCIE riser goes under the GPU and to the mainboard, and every inch of the 30cm was needed. All the fans (except for the PSU, mainboard SDD fan, pump and radiator fans as they all have their own headers) were connected to the single FAN header on the mainboard with many Y-splitters that came with the fans. All 8 mini fans should never overpower the fan header from my calculations, but it's still a stretch LOL. The font panel of the UHD Blu-Ray drive ;) and the USB-C floppy replacement were sanded and then sprayed (not recommended because of the "cleanup" work on the Blu-Ray drive to get it to open and close nicely again). The power switch can be opened and a small black peace at the top can be cut off to make it into a button. Finally, all case switches and LED's (HDD/POWER-LED and the POWER-SWITCH) were soldered to the mainboard-connectors and then connected to the mainboard.</p>
+    <p>That was a lot of text, but that was it. It is VERY tight. And I mean VERY VERY tight. I had to push a lot of cables down and under the GPU bracket. I still cannot believe that the GPU fans are actually spinning xD.</p>
+    <p>Temperature? Fine. The case does get hot, but the GPU stays at 65-70 at IDEL, 90-95 at 100% load (not much worse than in my previous case, which was a good case with good and well-functioning airflow). The CPU is definitely a lot hotter than before. I used a 360mm radiator before this case and it cooled it much better and kept the CPU above the 95 degree mark for longer. Why 95 degrees? AMD designed this generation of CPUs to use as much power and boost as possible until they reach 95 degrees and then try to stay there. It works, but it is really weird. <b><u>I used my usual settings for better efficiency</u></b>:</p>
+    <p><u><i>Link to a Reddit post on how to find it is in the sources section. Actually hard to find on the web</i></u> (Keeps the general temperature under control without sacrificing performance).</p>
+    <ul>
+      <li>TDP set to 105W "ECO-MODE"</li>
+      <li>"Precision Boost Overdrive" set to "Set Thermal Point 85°C"</li>
+      <li>EXPO/EMP enabled</li>
+      <li>High Efficiency Mode for RAM</li>
+      <li>Internal Graphics to OFF</li>
+      <li>Internal Audio to OFF</li>
+      <li>All FANS set to PWM and system temperature with a slightly higher curve. Makes the computer a little louder than a normal case, but keeps the airflow stable.</li>
+    </ul>
+    <br>
+    <p>That was about it. The computer works well, is a bit louder than other cases but not too bad. Lets see how long it works like soooo many other sleeper builds out there.</p>
+    <br>
+    <hr>
+    <br>
+    <h2><u><b>And now a gallery of pictures of it</b></u>:</h2>
+    <a href="DATA/01.png"><img src="DATA/01.jpg" alt="01 Sleeper PC with cute cat on it sleeping." style="width:50%;";></a>
+    <a href="DATA/02.jpg"><img src="DATA/02.jpg" alt="02 Sleeper PC with cute cat on it sleeping again." style="width:50%;";></a>
+    <a href="DATA/03.jpg"><img src="DATA/03.jpg" alt="03 Cat behind open computer with tung out." style="width:50%;";></a>
+    <a href="DATA/04.jpg"><img src="DATA/04.jpg" alt="04 AIO bend to fit into case." style="width:50%;";></a>
+    <a href="DATA/05.jpg"><img src="DATA/05.jpg" alt="05 Mainboard with GPU above." style="width:50%;";></a>
+    <a href="DATA/06.jpg"><img src="DATA/06.jpg" alt="06 Side view from the Mainboard side." style="width:50%;";></a>
+    <a href="DATA/07.jpg"><img src="DATA/07.jpg" alt="07 Small fans and their orientation." style="width:50%;";></a>
+    <a href="DATA/08.jpg"><img src="DATA/08.jpg" alt="08 Front with air intakes." style="width:50%;";></a>
+    <a href="DATA/09.jpg"><img src="DATA/09.jpg" alt="09 Back of the case with PSU cutout and cat sitting in the background... menacingly." style="width:50%;";></a>
+    <a href="DATA/10.jpg"><img src="DATA/10.jpg" alt="10 PSU side of the case." style="width:50%;";></a>
+    <a href="DATA/11.jpg"><img src="DATA/11.jpg" alt="11 Case open shown from above" style="width:50%;";></a>
+    <a href="DATA/12.jpg"><img src="DATA/12.jpg" alt="12 Cat sitting on the case... again." style="width:50%;";></a>
+    <br>
+    <h2>Sources:</h2>
+    <ul>
+      <li><a href="https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/">https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/</a></li>  
+    </ul>
+    <div id="Footer"><script type="text/javascript">WriteFooter('2024.03.24 - 23:37', "ALL RIGHTS RESERVED, INCLUDING IMAGES!");</script></div>
+  </body>
+</html>
