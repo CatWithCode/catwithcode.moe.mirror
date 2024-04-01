@@ -56,6 +56,7 @@
       <li>All FANS set to PWM and system temperature with a slightly higher curve. Makes the computer a little louder than a normal case, but keeps the airflow stable.</li>
     </ul>
     <br>
+    <p><u><b>UPDATE - 2024.04.01</b></u>: One expected problem is that the fans only react to the CPU, and that is bad in a case where airflow is SO important! What I did was to set all the fan and pump settings in the BIOS to MAX. This makes sure that everything has enough air during downtime. And in the OS (Linux of course ;)) I had to install the "NCT6687D Kernel module" from "Fred78290". This is needed because the chipset used by MSI is not fully supported by the Linux kernel by default. The easiest way is to install it as a DKMS package, add it to "/etc/modules", get systemd to load it at boot time with the "modules-load.d" module, and enable the GPU parameter with the "amdgpu.pfeaturemask=0xffffffff" kernel parameter in the boot loader. Now the sensor is detected, but software is needed to control the fans. There are tools such as CoolerControl or CoreCTL that can do this. The best way is to create a custom sensor that uses the current max value of both GPU and CPU and then react to it with a fan curve  (I've linked everthing useful I found in the Sources section).</p>
     <p>That was about it. The computer works well, is a bit louder than other cases but not too bad. Lets see how long it works like soooo many other sleeper builds out there.</p>
     <br>
     <hr>
@@ -76,7 +77,15 @@
     <br>
     <h2>Sources:</h2>
     <ul>
-      <li><a href="https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/">https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/</a></li>  
+      <li><a href="https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/">https://www.reddit.com/r/MSI_Gaming/comments/y13m3t/a_quick_look_at_msi_b650_bios_features_pbo/</a></li>
+      <li><a href="https://askubuntu.com/questions/1394680/unable-to-see-fan-speed-on-ubuntu-20-04-with-msi-board">https://askubuntu.com/questions/1394680/unable-to-see-fan-speed-on-ubuntu-20-04-with-msi-board</a></li>
+      <li><a href="https://github.com/Fred78290/nct6687d">https://github.com/Fred78290/nct6687d</a></li>
+      <li><a href="https://unix.stackexchange.com/questions/71064/systemd-automate-modprobe-command-at-boot-time">https://unix.stackexchange.com/questions/71064/systemd-automate-modprobe-command-at-boot-time</a></li>
+      <li><a href="https://superuser.com/questions/1583194/how-to-make-amdgpu-ppfeaturemask-work-with-kernel-5-4-0-of-ubuntu-20-04">https://superuser.com/questions/1583194/how-to-make-amdgpu-ppfeaturemask-work-with-kernel-5-4-0-of-ubuntu-20-04</a></li>
+      <li><a href="https://gitlab.com/coolercontrol/coolercontrol">https://gitlab.com/coolercontrol/coolercontrol</a></li>
+      <li><a href="https://gitlab.com/corectrl/corectrl">https://gitlab.com/corectrl/corectrl</a></li>
+      <li><a href="https://wiki.archlinux.org/title/Fan_speed_control">https://wiki.archlinux.org/title/Fan_speed_control</a></li>
+      <li><a href="https://github.com/Maldela/Fancontrol-GUI">https://github.com/Maldela/Fancontrol-GUI</a></li>
     </ul>
     <div id="Footer"><script type="text/javascript">WriteFooter('2024.03.24 - 23:37', "ALL RIGHTS RESERVED, INCLUDING IMAGES!");</script></div>
   </body>
