@@ -13,24 +13,30 @@
     <br>
     <p>Plug an AUX cable into your device's headphone jack and the other end into your computer's microphone jack. And yes, you can even use Bluetooth with this. IDK how good this will work or what input and output you need to set but it works.</p>
     <p>You need to install pavucontrol.</p>
-    <p>Now you can pipe the sound through. Normally it automatically recognizes what you try to do. If that is right then this command is enough:</p>
-    <p><u><i>pactl load-module module-loopback latency_msec=1</i></u></p>
+    <p>Now you can pipe the sound through. Normally it automatically recognizes what you are trying to do. If that is right then this command is enough:</p>
+    <p><u><i>pactl load-module module-loopback</i></u></p>
     <p>If it doesn't work right automatically, then you need to use this command and change source and sink until you find the right source and output (Be careful! Sometimes you pipe some random noise through and that can be very VERY LOUD!):</p>
-    <p><u><i>pactl load-module module-loopback latency_msec=1 source=1 sink=0</i></u></p>
+    <p><u><i>pactl load-module module-loopback source=1 sink=0</i></u></p>
     <p>You will notice that the command dose not wait for your input and the service runs in the background. To stop the passthrough you need to stop the service:</p>
     <p><u><i>pactl unload-module module-loopback</i></u></p>
     <p>To make it easy to use you can create a bash file:</p>
     <p><u><i>
-    echo "Mic2Speaker"
-    <br>
-    pactl load-module module-loopback latency_msec=1
-    <br>
-    read -p "Press the Any-Key to Exit"
-    <br>
-    pactl unload-module module-loopback
-    <br>
-    exit
+<xmp>#!/bin/bash
+clear
+echo "Mic2Speaker"
+echo "By CatWithCode"
+echo ""
+read -p "CHECK THE MIC VOLUME!!! THEN PRESS THE ANY-KEY!"
+echo ""
+echo "ID:"
+pactl load-module module-loopback #latency_msec=1
+echo ""
+read -p "Press the Any-Key to Stop & Exit"
+pactl unload-module module-loopback
+exit
+</xmp>
     </i></u></p>
+    <p>"latency_msec=1" can be used if your pass-through does not sound clean for some reason. </p>
     <p>That's it. If you create a menu entry you can start/exit it way more easily. With programs like menulibre (or you do it manually) it's done in seconds. Here is the command I use to start the bash file:</p>
     <p><u><i>gnome-terminal -- /PathToTheBashFile/Mic2Speaker.sh</i></u></p>
     <br>
@@ -40,6 +46,6 @@
       <li><a href="https://askubuntu.com/questions/355082/pulseaudio-loopback-unload-audio-output-devices">askubuntu.com</a></li>
       <li><a href="https://wiki.archlinux.org/title/PulseAudio">wiki.archlinux.org</a></li>
     </ul>    
-    <div id="Footer"><script type="text/javascript">WriteFooter('2022.05.15 - 20:15');</script></div>  
+    <div id="Footer"><script type="text/javascript">WriteFooter('2024.05.21 - 20:15');</script></div>  
   </body>
 </html>
