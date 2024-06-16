@@ -58,7 +58,14 @@
     </ul>
     <br>
     <p><u><b>UPDATE - 2024.04.01</b></u>: One expected problem is that the fans only react to the CPU, and that is bad in a case where airflow is SO important! What I did was to set all the fan and pump settings in the BIOS to MAX. This makes sure that everything has enough air during downtime. And in the OS (Linux of course ;)) I had to install the "NCT6687D Kernel module" from "Fred78290". This is needed because the chipset used by MSI is not fully supported by the Linux kernel by default. The easiest way is to install it as a DKMS package, add it to "/etc/modules", get systemd to load it at boot time with the "modules-load.d" module, and enable the GPU parameter with the "amdgpu.pfeaturemask=0xffffffff" kernel parameter in the boot loader. Now the sensor is detected, but software is needed to control the fans. There are tools such as CoolerControl or CoreCTL that can do this. The best way is to create a custom sensor that uses the current max value of both GPU and CPU and then react to it with a fan curve. As the computer cools down, a delayed fan slow-down is also a good idea to help push the hot air out. A delay of about 5 to 7 seconds each 3°C should be slow enough (I've linked everthing useful I found in the Sources section).</p>
-    <p><u><b>UPDATE - 2024.05.23</b></u>: The AMD Radeon RX 7900XT/XTX fan and overclocking controls are still not what they should be. There seems to be an architectural change in how the settings are applied in the driver. The only tool I could find that mostly works with them was Lact by ilya-zlobintsev.</p>
+    <p><u><b>UPDATE - 2024.05.23</b></u>: The AMD Radeon RX 7900XT/XTX fan and overclocking controls are still not what they should be. There seems to be an architectural change in how the settings are applied in the driver. The only tool I could find that mostly works with them was Lact by ilya-zlobintsev. I have added / subtracted the following values for an overclock/undervolt:</p>
+    <ul>
+      <li>Power usage limit: +15% (In my case 38W)</li>
+      <li>Maximum GPU Clock (MHz): +100</li>
+      <li>Maximum VRAM Clock (MHz): +102</li>
+      <li>GPU voltage offset (mV): -200</li>
+      <li>And a very aggressive fan curve. Quiet at normal temperatures, but as soon as a heavy load comes in and heats things up (around 75°C) the fan goes into 100% mode. My reference card would never go 100% on its own, so I forced it.</li>
+    </ul>
     <p>That was about it. The computer works well, is a bit louder than other cases but not too bad. Lets see how long it works like soooo many other sleeper builds out there.</p>
     <br>
     <hr>
@@ -92,6 +99,8 @@
       <li><a href="https://github.com/Maldela/Fancontrol-GUI">https://github.com/Maldela/Fancontrol-GUI</a></li>
       <li><a href="https://github.com/ilya-zlobintsev/LACT">https://github.com/ilya-zlobintsev/LACT</a></li>
       <li><a href="https://github.com/Fred78290/nct6687d/issues/94">https://github.com/Fred78290/nct6687d/issues/94</a></li>
+      <li><a href="https://www.reddit.com/r/Amd/comments/zzzhnh/a_short_report_and_guide_on_7900xtx_ocuv/">https://www.reddit.com/r/Amd/comments/zzzhnh/a_short_report_and_guide_on_7900xtx_ocuv/</a></li>
+      <li><a href="https://youtu.be/pZThC3ZHwuE">https://youtu.be/pZThC3ZHwuE</a></li>
     </ul>
     <div id="Footer"><script type="text/javascript">WriteFooter('2024.06.06 - 22:20', "ALL RIGHTS RESERVED, INCLUDING IMAGES!");</script></div>
   </body>
