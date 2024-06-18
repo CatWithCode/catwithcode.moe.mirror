@@ -1,8 +1,13 @@
 /* # Preparations:
-# - Font:
+# - Licenses:
 
-# - - OpenDyslexic:
-# - - - License:
+# - - Colors:
+# - - - Color palette inspired by "ZENITH" from "SweetAvery":
+https://lospec.com/sweet-avery
+https://lospec.com/palette-list/zenith
+
+# - - Fonts:
+# - - - OpenDyslexic:
 CatWithCode.moe uses the "OpenDyslexic"-Font wich was created by "Abbie Gonzalez" and licensed under "SIL-OFL":
 https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl
 https://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
@@ -21,7 +26,7 @@ https://abbiecod.es/
 https://github.com/antijingoist
 https://github.com/antijingoist/opendyslexic
 
-# - - - - Regular:*/
+# - - - - Regular: */
 @font-face {
     font-family: opendyslexic;
     src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Regular.woff2);
@@ -29,7 +34,7 @@ https://github.com/antijingoist/opendyslexic
     font-weight: normal;
 }
 
-/* # - - - - Bold:*/
+/* # - - - - Bold: */
 @font-face {
     font-family: opendyslexic;
     src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Bold.woff2);
@@ -37,7 +42,7 @@ https://github.com/antijingoist/opendyslexic
     font-weight: bold;
 }
 
-/* # - - - - Italic:*/
+/* # - - - - Italic: */
 @font-face {
     font-family: opendyslexic;
     src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Italic.woff2);
@@ -45,7 +50,7 @@ https://github.com/antijingoist/opendyslexic
     font-weight: normal;
 }
 
-/* # - - - - Bold Italic:*/
+/* # - - - - Bold Italic: */
 @font-face {
     font-family: opendyslexic;
     src: url(/Assets/Fonts/OpenDyslexic/OpenDyslexic-Bold-Italic.woff2);
@@ -57,12 +62,13 @@ https://github.com/antijingoist/opendyslexic
 /* # General Settings: 
 # - Variables: */
 :root {
-    --background: #19181b;
-    --foreground: #f5f5fa;
-    --header: #161618;
+    --background: #18171a;
+    --alt_background: #1e1c21;
+    --foreground: #81deff;
+    --alt_foreground: #e46c6c;
 }
 
-/* # - Global Font and Color:*/
+/* # - Global Font and Color: */
 * {
     /* # - Font and Text: */
     font-family: 'opendyslexic', 'Courier New', 'monospace';
@@ -86,10 +92,10 @@ hr {
 
 /* # - Body: */
 body {
-    /* # - Footer-Spacing (Fill Space in between):*/
+    /* # - Footer-Spacing (Fill Space in between): */
     min-height: 98vh; /* May need to be lowered. Prevents scrolling from filling the space between the footer and body content. */
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 /* # - Header: */
@@ -122,16 +128,16 @@ body {
     padding-bottom: 25px; /* Make sure the Header-Text does not overlap the border. */
 
     /* # - - - Styling: */
-    background-color: var(--header);
+    background-color: var(--alt_background);
 
     border-radius: 0px 0px 25px 25px;
-    border-bottom: 1px solid var(--foreground);
+    border-bottom: 1px solid var(--alt_foreground);
 }
 
 /* # - - Header-Content: */
 #Header_Border * {
     /* # - - - Styling: */
-    background-color: var(--header);
+    background-color: var(--alt_background);
 }
 
 /* # - Fooder: */
@@ -152,13 +158,13 @@ body {
 
     /* # - - Styling: */
     text-align: center;
-    background-color: var(--header);
+    background-color: var(--alt_background);
 
     border-radius: 25px 25px 0px 0px;
 
-    border-top: 1px solid var(--foreground);
-    border-left: 1px solid var(--foreground);
-    border-right: 1px solid var(--foreground);
+    border-top: 1px solid var(--alt_foreground);
+    border-left: 1px solid var(--alt_foreground);
+    border-right: 1px solid var(--alt_foreground);
 }
 
 /* # - - Fooder-Content: */
@@ -171,7 +177,7 @@ body {
     padding-bottom: 0px;
 
     /* # - - - Styling: */
-    background-color: var(--header);
+    background-color: var(--alt_background);
 }
 /* # # # */
 
