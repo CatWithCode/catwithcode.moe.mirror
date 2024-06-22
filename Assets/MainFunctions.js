@@ -1,16 +1,17 @@
 // Public Functions:
 
-// Creating Page-Header:
+// - Main Components:
+// - - Creating Page-Header:
 async function WriteHeader() {
-    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Header.html');
+    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Page/Header.html');
 }
 
-// Creating Page-Footer:
+// - - Creating Page-Footer:
 async function WriteFooter(dateText, usedLicense = "CC BY-NC-ND 4.0") {
-    document.getElementById("Footer").innerHTML = (await this.aSyncLoadFile('/Assets/BaseFiles/Footer.html')).replace("###DATE_TEXT###", dateText).replace("###LICENSE###", usedLicense);
+    document.getElementById("Footer").innerHTML = (await this.aSyncLoadFile('/Assets/BaseFiles/Page/Footer.html')).replace("###DATE_TEXT###", dateText).replace("###LICENSE###", usedLicense);
 }
 
-// Write HTML-Head (NOT async because of WebCrawler):
+// - - Write HTML-Head (NOT async because of WebCrawler):
 function WriteHead() {
     document.write('\
     \
@@ -21,8 +22,49 @@ function WriteHead() {
     ');
 }
 
+// - ImageLibary Components 
+// - - Creating the ImageLibary Header (NOT async because it breaks CSS):
+function WriteImageLibaryHeader(titel_text) {
+    var imageLibaryHeaderCode = '\
+        \
+        <h1><a href="/ImageLibraries/ImageLibaries.html" class="cleanText">&nbsp;🔙&nbsp;###TEXT###</a></h1>'
+    
+        document.write(imageLibaryHeaderCode.replace("###TEXT###", titel_text));
+}
+
+// - - Creating ImageBody (NOT async because it breaks CSS) [COULD BE MADE FAR BETTER!]:
+function WriteImageBody(img_Source, alt_text, img_disc, uploadDate, newWindow = true, diffrentLink = '', maxWidthOverwrite = false) {
+    var imageBodyCode = '\
+        \
+        <div id="ImageBody" ###CCSS### ###LINK_BODY###" style="cursor: pointer;">\
+            <img src="###IMG_SRC###" alt="###ALT###">\
+            <p><u>###DISC###</u></p>\
+            <p>###DATE###</p>\
+        </div>'
+
+    // Using the wanted Link:
+    var linkTo = (diffrentLink != '') ? diffrentLink : img_Source;
+
+    // BOOLEAN SAFE Link opener:
+    var linkType = (newWindow === true) ? 'onclick="window.open(\'###LINK###\');' : 'onclick="location.href=\'###LINK###\';';
+
+    // Custom Width:
+    var customCss = (maxWidthOverwrite === true) ? 'style="min-width:98%; padding: 2px; border: var(--image_border) solid var(--foreground);"' : '';
+
+    document.write(imageBodyCode.replace("###CCSS###", customCss)     // 100% MaxWidth
+                                .replace("###LINK_BODY###", linkType) // Link Body
+                                .replace("###LINK###", linkTo)        // Link
+                                .replace("###IMG_SRC###", img_Source) // Image
+                                .replace("###ALT###", alt_text)       // Alt-Text
+                                .replace("###DISC###", img_disc)      // Description
+                                .replace("###DATE###", uploadDate)    // Date of Upload
+    );          
+}
+
 // Internel Functions:
-// Loads File from a desired location asynchronously:
+
+// - Misc:
+// - - Loads File from a desired location asynchronously:
 async function aSyncLoadFile(filePath) {
     return fetch(filePath)
         .then((response)=>response.text())

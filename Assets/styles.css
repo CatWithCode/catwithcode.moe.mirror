@@ -62,10 +62,18 @@ https://github.com/antijingoist/opendyslexic
 /* # General Settings: 
 # - Variables: */
 :root {
+    /* # - - General-Colors: */
     --background: #18171a;
     --alt_background: #1e1c21;
     --foreground: #81deff;
     --alt_foreground: #e46c6c;
+
+    /* # - - Images: */
+    --image_margin: 1%;
+    --image_padding: 1%;
+    --image_border: 0.2em;
+    --image_border_color: #67e57b;
+    --image_width: 25em;
 }
 
 /* # - Global Font and Color: */
@@ -179,13 +187,45 @@ body {
     /* # - - - Styling: */
     background-color: var(--alt_background);
 }
-/* # # # */
+/* # # #
 
- /* # Classes for custom items: */
+# - - ImageBody-Content: */
+#ImageLibrary {
+    /* Align Images into Rows dynamically: */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: var(--image_padding);
+}
 
- /* # - Centred Items:
-        For Items that need to be Centred (Ideally used with div's). */
+#ImageBody {
+    /* Image Body itself: */
+    border-radius: 8px;
+    border: var(--image_border) solid var(--image_border_color);
+    padding: var(--image_padding);
+    margin: var(--image_margin);
+    max-width: var(--image_width);
+    text-align: center;
+    cursor: pointer;
+}
+
+#ImageBody img {
+    /* Image size fix: */
+    border-radius: 8px;
+    max-width: 100%;
+}
+/* # # #
+
+# Classes for custom items:
+# - Centred Items:
+    For Items that need to be Centred (Ideally used with div's). */
 .centredItems {
     text-align: center;
+}
+
+/* # - Clean Text:
+    For Items that need to have Decorations like underline removed. */
+.cleanText {
+    text-decoration: none;
 }
 /* # # # */
