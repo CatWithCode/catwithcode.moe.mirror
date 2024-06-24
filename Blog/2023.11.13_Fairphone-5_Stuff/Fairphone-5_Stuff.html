@@ -100,6 +100,18 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
     <br>
     <br>
     <hr>
+    <h2><u>Installing LineageOS</u>:</h2>
+    <p>Finally, one year after the release of the Fairphone 5, LineageOS is officially available. The installation is a little more involved than it was back in the Android 10 days, but consists of little more than unlocking the bootloader, flashing some custom boot and vendor partitions and then using them to install LineageOS completely. It is by far (as usual on Android) the best AndroidROM you can use. With a de-Google script, you can remove the last few remnants of Google-BS and you have a really clean AndroidOS. I have a script linked in this entry that I use and it should work with LineageOS too (Just remove the APK and DISABLE parts, those are only needed on stock FairphoneOS! IDK what they would do on LineageOS). If you want to install it too just follow the official instructions.</p>
+    <a href="https://wiki.lineageos.org/devices/FP5/">https://wiki.lineageos.org/devices/FP5/</a>
+    <a href="https://wiki.lineageos.org/devices/FP5/install/">https://wiki.lineageos.org/devices/FP5/install/</a>
+    <a href="https://download.lineageos.org/devices/FP5/builds">https://download.lineageos.org/devices/FP5/builds</a>
+    <br>
+    <a href="https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh">https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh</a>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <hr>
     <h2><u>Installing /e/OS</u>:</h2>
     <p>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you:</p>
     <p>There are stable builds, which is updated every few months, and a dev builds, which is updated once or twice a month and can be viewed like LineageOS Nightly-Builds. Pick your poison. I use dev. Switching between dev and stable is possible, but not recommended by the creators of /e/OS (so much so that you will find NOTHING on how to do it for them). I have added how to do it to this blog post. Your welcome :3.</p>
@@ -198,6 +210,7 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
       </ol>
     </p>
     <p><u>Flashing Stock Firmware</u>:</p>
+    <p>It could happen that you only get the following output without any flashing of files: "<u><i>Info: One Fairphone 5 in fastboot mode found (serial number: XXXXXXXX).</i></u>". This means that executables in the subfolders can not run and are missing the flag that allows them to be executed. Run "<b><u><i>chmod +x *.*</i></u></b>" in the main folder and every file that was in the archive should now be executable.</p>
     <p>
       <ol>
         <li>adb reboot bootloader</li>
@@ -267,10 +280,15 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
       <li><a href="https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662">https://xdaforums.com/t/rooting-fp5.4634181/#post-89111662</a></li>
       <li><a href="https://topjohnwu.github.io/Magisk/ota.html">https://topjohnwu.github.io/Magisk/ota.html</a></li>
       <li><a href="/Blog/2024.02.06_AndroidAuto_without_Google/AndroidAuto_without_Google.html">/Blog/2024.02.06_AndroidAuto_without_Google/AndroidAuto_without_Google.html</a></li>
+      <li><a href="https://forum.fairphone.com/t/e-os-installation-fastboot-do-not-detect-my-fp5/103222/6">https://forum.fairphone.com/t/e-os-installation-fastboot-do-not-detect-my-fp5/103222/6</a></li>
+      <li><a href="https://wiki.lineageos.org/devices/FP5/install/">https://wiki.lineageos.org/devices/FP5/install/</a></li>
+      <li><a href="https://download.lineageos.org/devices/FP5/builds">https://download.lineageos.org/devices/FP5/builds</a></li>
+      <li><a href="https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh">https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh</a></li>
+      <li><a href="https://wiki.lineageos.org/devices/FP5/">https://wiki.lineageos.org/devices/FP5/</a></li>
       <!--
       <li><a href="">Link</a></li>
       -->
     </ul>
-    <div id="Footer"><script type="text/javascript">WriteFooter('2024.02.01 - 20:40');</script></div>
+    <div id="Footer"><script type="text/javascript">WriteFooter('2024.06.24 - 19:00');</script></div>
   </body>
 </html>
