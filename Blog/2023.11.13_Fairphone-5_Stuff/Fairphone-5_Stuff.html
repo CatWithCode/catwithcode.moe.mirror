@@ -23,6 +23,17 @@
     <br>
     <!--HERE NEW ENTRY (COPY, PASTE PLACEHOLDER)-->
     <hr>
+    <h2><u>Installing LineageOS</u>:</h2>
+    <p>Finally, one year after the release of the Fairphone 5, LineageOS is officially available. The installation is a little more involved than it was back in the Android 10 days, but consists of little more than unlocking the bootloader, flashing some custom boot and vendor partitions and then using them to install LineageOS completely. It is by far (as usual on Android) the best AndroidROM you can use. With a de-Google script, you can remove the last few remnants of Google-BS and you have a really clean AndroidOS. I have a script linked in this entry that I use and it should work with LineageOS too (Just remove the APK and DISABLE parts, those are only needed on stock FairphoneOS! IDK what they would do on LineageOS). If you want to install it too just follow the official instructions.</p>
+    <a href="https://wiki.lineageos.org/devices/FP5/">https://wiki.lineageos.org/devices/FP5/</a>
+    <a href="https://wiki.lineageos.org/devices/FP5/install/">https://wiki.lineageos.org/devices/FP5/install/</a>
+    <a href="https://download.lineageos.org/devices/FP5/builds">https://download.lineageos.org/devices/FP5/builds</a>
+    <br>
+    <a href="https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh">https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh</a>
+    <hr>
+    <br>
+    <br>
+    <hr>
     <h2><u>ACC (ACCA) on FairphoneOS or /e/OS</u>:</h2>
     <p>Currently, ACC does not work on the available Android ROMs. It will probably work on all custom ROMs, but I've only tested it on more or less two stock ROMs (FairphoneOS and /e/OS) and neither of them worked. I'm really sure it has something to do with the read-only system partitions. It should work on GSI's BUT I have tested and used them a lot in the past and they more often then not, not worth the effort and are only a good option if you have non good native port's. Currently /e/OS is the best way to get a good LineageOS Port on your Fairphone 5.</p>
     <a href="https://github.com/VR-25/acc">https://github.com/VR-25/acc</a>
@@ -100,18 +111,6 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
     <br>
     <br>
     <hr>
-    <h2><u>Installing LineageOS</u>:</h2>
-    <p>Finally, one year after the release of the Fairphone 5, LineageOS is officially available. The installation is a little more involved than it was back in the Android 10 days, but consists of little more than unlocking the bootloader, flashing some custom boot and vendor partitions and then using them to install LineageOS completely. It is by far (as usual on Android) the best AndroidROM you can use. With a de-Google script, you can remove the last few remnants of Google-BS and you have a really clean AndroidOS. I have a script linked in this entry that I use and it should work with LineageOS too (Just remove the APK and DISABLE parts, those are only needed on stock FairphoneOS! IDK what they would do on LineageOS). If you want to install it too just follow the official instructions.</p>
-    <a href="https://wiki.lineageos.org/devices/FP5/">https://wiki.lineageos.org/devices/FP5/</a>
-    <a href="https://wiki.lineageos.org/devices/FP5/install/">https://wiki.lineageos.org/devices/FP5/install/</a>
-    <a href="https://download.lineageos.org/devices/FP5/builds">https://download.lineageos.org/devices/FP5/builds</a>
-    <br>
-    <a href="https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh">https://github.com/CatWithCode/Fairphone5-Tweaks/blob/main/deGoogle/DeGoogle_Fairphone.sh</a>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <hr>
     <h2><u>Installing /e/OS</u>:</h2>
     <p>They have released the official /e/OS port for the Fairphone 5. The first release has a few minor issues (90hz mode randomly turns off, boot animation is a bit buggy with magisk installed, the system is sometimes laggy for a few seconds) but it is a good port and at the time of writing a good and easy way to de-Google the Fairphone 5. I wrote a script to remove MicroG and /e/OS components from the OS without breaking anything. I do not need MicroG and do not use any /e/OS services. You can find it in my "Fairphone5-Tweaks" repository. The Fairphone 5 can also be purchased with the /e/OS pre-installed for 50€ extra if this is important to you:</p>
     <p>There are stable builds, which is updated every few months, and a dev builds, which is updated once or twice a month and can be viewed like LineageOS Nightly-Builds. Pick your poison. I use dev. Switching between dev and stable is possible, but not recommended by the creators of /e/OS (so much so that you will find NOTHING on how to do it for them). I have added how to do it to this blog post. Your welcome :3.</p>
@@ -138,6 +137,7 @@ flash_image_ab_or_abort "${sn}" shrm "${IMAGES_DIR}/shrm.img"
     <p>At the time of writing, there are more or less no CustomRoms. They are all under development. This meant that I had to de-google the stock rom as much as possible without breaking things. After a lot of testing, I found a config that keeps everything working, including updates, without modifying the Stock-Rom at all, while cleaning it up as much as possible without root (The stock rom is closed source, which means cleaning everything up and making sure your done is impossible). I used Universal Android Debloater and some other tutorials on the internet to create a script. You can find it in my "Fairphone5-Tweaks" repository:</p>
     <a href="https://github.com/CatWithCode/Fairphone5-Tweaks">https://github.com/CatWithCode/Fairphone5-Tweaks</a>
     <p>You need to replace almost every app on your phone. The script will also install any APK it finds in the Assets/Basic/ subfolders. Make sure the apps are the correct architecture! I recommend installing them all on the phone itself with the F-Droid and Aurora App and then dumping them with an extractor. Then you can create your own apk folder for easy reinstall after a reset.</p>
+    <p>GPS provider and WebView needs also to be swaped out. The issue is that Bromite is more or less abandoned and other WebView replacements are not well supoorted. At the moment it dose not theme worth it. GPS provider can be changed to one in you area.</p>
     <h1><u><b>IMPORTANT:</b></u></h1>
     <p><u><b>>>> READ THE Aurora-Store FIX-SECTION!</b></u></p>
     <p><u><b>>>> "Google Play Services" and "Google Services Framework" are only disabled! You need them to update the stock rom via OTA! Enable both and you can update again! A temporary uninstall would soft-brick this functionality! You could flash each OTA update (could not find any offical zip's) with the recovery, but this could lead to bricking and slot desynchronisation!</b></u></p>
