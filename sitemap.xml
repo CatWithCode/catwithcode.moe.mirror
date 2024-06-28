@@ -11,11 +11,11 @@
 </url>
 <url>
   <loc>https://catwithcode.moe/Feed/RSS.xml</loc>
-  <lastmod>2024-06-24T19:00:11+00:00</lastmod>
+  <lastmod>2024-06-28T19:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/blog.html</loc>
-  <lastmod>2024-06-24T19:00:11+00:00</lastmod>
+  <lastmod>2024-06-28T19:00:11+00:00</lastmod>
 </url>
 <url>
   <loc>https://catwithcode.moe/index.html</loc>
@@ -264,5 +264,9 @@
 <url>
   <loc>https://catwithcode.moe/ImageLibraries/Project_CWC/Project_CWC_Library.html</loc>
   <lastmod>2024-06-22T00:00:11+00:00</lastmod>
+</url>
+<url>
+  <loc>https://catwithcode.moe/Blog/2024.06.28_Linux_Flawless_Widescreen_With_GameScope_Mod_Launchers/Linux_Flawless_Widescreen_With_GameScope_Mod_Launchers.html</loc>
+  <lastmod>2024-06-28T00:00:11+00:00</lastmod>
 </url>
 </urlset>
