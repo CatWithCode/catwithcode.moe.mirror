@@ -1,4 +1,8 @@
-User-Agent: *
-Allow: /
+User-agent: *
+Disallow:
 
-Sitemap: /sitemap.xml
+Allow: /Assets/
+Allow: /Blog/
+Allow: /Feed/
+Allow: /ImageLibraries/
+Sitemap: https://catwithcode.moe/sitemap.xml
