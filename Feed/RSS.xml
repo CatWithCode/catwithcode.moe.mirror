@@ -15,6 +15,14 @@
         </item>
         -->
         <item>
+            <title>CatWithCode - Linux File Write Protection that can not be deleted from sudo</title>
+            <link>https://catwithcode.moe/Blog/2024.08.29_Linux_File_Write_Protect/Linux_File_Write_Protect.html</link>
+            <description>Usefull if you want to make sure files and folders don"t just get removed.
+
+            https://catwithcode.moe/Blog/2024.08.29_Linux_File_Write_Protect/Linux_File_Write_Protect.html
+            </description>
+        </item>
+        <item>
             <title>CatWithCode - Getting Flawless Widescreen to work on Linux with Mod-Launchers (e.g. HedgeModManager) and GameScope</title>
             <link>https://catwithcode.moe/Blog/2024.06.28_Linux_Flawless_Widescreen_With_GameScope_Mod_Launchers/Linux_Flawless_Widescreen_With_GameScope_Mod_Launchers.html</link>
             <description>Mod-Loaders, GameScope, Proton, Flawless Widescreen and Linux. More sandboxes anyone? :D
