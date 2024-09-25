@@ -14,20 +14,21 @@
             </description>
         </item>
         -->
+        <!-- RSS ENTRYS - START -->
         <item>
-            <title>CatWithCode - Simplification of my Website Pipline and update to Project CWC</title>
+            <title>CatWithCode - Significant simplification of my Websites Pipline and update to Project CWC</title>
             <link>https://catwithcode.moe/Blog/2024.09.25_Simplification_Of_Website_Pipline/Simplification_Of_Website_Pipline.html</link>
-            <description>Soon (TM).
-
+            <description>I took a small break from Project CWC and modded some Wii-Stuff, see last entry, and build a script for my Website. that helps updating certain things.
+            
             https://catwithcode.moe/Blog/2024.09.25_Simplification_Of_Website_Pipline/Simplification_Of_Website_Pipline.html
             </description>
         </item>
         <item>
             <title>CatWithCode - Wii Sensor Bar to USB and Wii Remote on PC</title>
-            <link>https://catwithcode.moe/Blog/2024.09.25_Wii_Remote_and_SensorBar_On_PC/Wii_Remote_and_SensorBar_On_PC.html</link>
-            <description>Having fun with old gaming Stuff.
-
-            https://catwithcode.moe/Blog/2024.09.25_Wii_Remote_and_SensorBar_On_PC/Wii_Remote_and_SensorBar_On_PC.html
+            <link>https://catwithcode.moe/Blog/2024.09.24_Wii_Remote_and_SensorBar_On_PC/Wii_Remote_and_SensorBar_On_PC.html</link>
+            <description>I have modded stuff on the weekend... and one of the things was to make a Wii Sensor Bar universal aka. USB-Powered. But I did not want to invest to much money into it (meaning doing it with just an USB-Cable and solder).
+            
+            https://catwithcode.moe/Blog/2024.09.24_Wii_Remote_and_SensorBar_On_PC/Wii_Remote_and_SensorBar_On_PC.html
             </description>
         </item>
         <item>
@@ -486,6 +487,16 @@
             https://catwithcode.moe/Blog/2022.05.03-02_MonoGame_MGCB_Linux_Error/MonoGame_MGCB_Linux_Error.html
             </description>
         </item>
+        <!--
+        <item>
+            <title>CatWithCode - Unity-Game-Engine with Visual Studio Code on Arch Linux / Manjaro Linux</title>
+            <link>https://catwithcode.moe/Blog/2022.05.03-01_Unity_VS-Code_Linux/Unity_VS-Code_Linux.html</link>
+            <description>"No."
+            
+            https://catwithcode.moe/Blog/2022.05.03-01_Unity_VS-Code_Linux/Unity_VS-Code_Linux.html
+            </description>
+        </item>
+        -->
         <item>
             <title>CatWithCode - Hello World</title>
             <link>https://catwithcode.moe/Blog/2022.05.02_Hello_World/Hello_World.html</link>

@@ -3,16 +3,22 @@
 # Deploy Website:
 # This creates the SiteMap and Updates the Archive. Blog, Feed and Footer must be set manually because the write Text can be different from file details.
 
-# - Configuration:
-# Variables:
-# URL:
+# - Configuration: ####################################################################################################
+# - - Variables:
+# 1: Strings:
 URL_PREFIX="https://catwithcode.moe/"
+WEBSITE_NAME="CatWithCode"
 
-# Sitemap:
-# File:
+# 2: Paths:
+# 2.1: Files:
 SITEMAP_FILE="sitemap.xml"
+BLOG_FILE="blog.html"
+RSS_FEED_FILE="Feed/RSS.xml"
 
-# - GENERATE ARCHIVE:
+# 2.2: Folders:
+BLOG_DIR="Blog"
+
+# - GENERATE ARCHIVE: ####################################################################################################
 
 # 1: Generate the HTML-Links with indentation and sort. BR in the same line because new line befor it would glitch out find:
 find . -type f ! -path '*/.*' -printf "    <a href=\"$URL_PREFIX%P\">$URL_PREFIX%P</a> <br>\n" | sort > temp_links.html
@@ -40,7 +46,7 @@ rm temp_links.html
 # 6: Update Time Step:
 sed -i "s|<p>[0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\} - [0-9]\{2\}:[0-9]\{2\} |<p>$(date '+%Y.%m.%d - %H:%M') |g" archive.html
 
-# - UPDATE SITEMAP:
+# - UPDATE SITEMAP: ####################################################################################################
 
 # 1: CleanUp old SideMap:
 > "$SITEMAP_FILE"
@@ -68,5 +74,70 @@ done
 
 # 8: End Sitemap XML:
 echo '</urlset>' >> "$SITEMAP_FILE"
+
+# - Update BlogPage: ####################################################################################################
+
+# 1: Create a list of all HTML files in the Blog directory and its subfolders:
+html_files=$(find "$BLOG_DIR" -type f -name "*.html" | sort)
+
+# 2: Loop through HTML files:
+while IFS= read -r html_file; do
+
+    # 3: Get LinkDateText:
+    linkDate_text=${html_file:5:10}
+
+    # 4: Check if the Entry is already in the Blog-Entry-List:
+    if ! grep -q "$html_file" "$BLOG_FILE"; then
+
+        # 5: Getting Blog-Entry Headline:
+        h1_text=$(grep -oP '(?<=<h1>).*?(?=</h1>)' "$html_file" | head -n 1)
+
+        # 6: Add new Entry. The double Lines are for indentation and new Line:
+        sed -i "/<!-- BLOG ENTRYS - START -->/a \\      <li><a href=\"$html_file\">$linkDate_text - $h1_text</a><br><br></li>\\
+        " "$BLOG_FILE"
+
+        # 7: Tell user what has been found and added:
+        echo "Added $html_file to $BLOG_FILE"
+    fi
+done <<< "$html_files"
+
+# - Update RSS-Feed: ####################################################################################################
+
+# 1: Create a list of all HTML files in the Blog directory and its subfolders:
+html_files_for_RSS=$(find "$BLOG_DIR" -type f -name "*.html" | sort)
+
+# 2: Loop through HTML files:
+while IFS= read -r html_file_for_RSS; do
+
+    # 3: Check if the Entry is already in the RSS-Feed:
+    if ! grep -q "$html_file_for_RSS" "$RSS_FEED_FILE"; then
+
+        # 4: Getting Blog-Entry Headline:
+        h1_text=$(grep -oP '(?<=<h1>).*?(?=</h1>)' "$html_file_for_RSS" | head -n 1)
+
+        # 5: Getting the Blog-Entry beginning:
+        # Limit seem not necessary:
+        #temp_p_text=$(grep -oP '(?<=<p>).*?(?=</p>)' "$html_file_for_RSS" | head -n 1)
+        #p_text=${temp_p_text:0:100}
+        p_text=$(grep -oP '(?<=<p>).*?(?=</p>)' "$html_file_for_RSS" | head -n 1)
+
+        # 6: Cleaning Discription from HTML:
+        cleand_p_text=$(echo "$p_text" | sed 's/<[^>]*>//g')
+
+        # 7: Add new RSS-Entry. The double Lines are for indentation and new Line:
+        sed -i "/<!-- RSS ENTRYS - START -->/a \
+        \\        <item>\n\
+            <title>$WEBSITE_NAME - $h1_text</title>\n\
+            <link>${URL_PREFIX}${html_file_for_RSS}</link>\n\
+            <description>${cleand_p_text}\n\
+            \n\
+            ${URL_PREFIX}${html_file_for_RSS}\n\
+            </description>\n\
+        </item>" "$RSS_FEED_FILE"
+
+        # 8: Tell user what has been found and added:
+        echo "Added $html_file_for_RSS to $RSS_FEED_FILE"
+    fi
+done <<< "$html_files_for_RSS"
 
 exit
