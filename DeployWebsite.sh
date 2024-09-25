@@ -3,6 +3,9 @@
 # Deploy Website:
 # This creates the SiteMap and Updates the Archive. Blog, Feed and Footer must be set manually because the write Text can be different from file details.
 
+# - Clean Output:
+clear
+
 # - Configuration: ####################################################################################################
 # - - Variables:
 # 1: Strings:
@@ -14,6 +17,7 @@ WEBSITE_NAME="CatWithCode"
 SITEMAP_FILE="sitemap.xml"
 BLOG_FILE="blog.html"
 RSS_FEED_FILE="Feed/RSS.xml"
+ARCHIVE_FILE="archive.html"
 
 # 2.2: Folders:
 BLOG_DIR="Blog"
@@ -27,7 +31,10 @@ find . -type f ! -path '*/.*' -printf "    <a href=\"$URL_PREFIX%P\">$URL_PREFIX
 sed -i '/DeployWebsite.sh/d' temp_links.html
 sed -i '/temp_links.html/d' temp_links.html
 
-# 3: Use sed to replace old Links between markers in archive.html. Is moved because read issues:
+# 3: CleanUp the old Archive:
+sed -i '/<!-- ARCHIVE - START -->/,/<!-- ARCHIVE - END -->/{//!d;}' ${ARCHIVE_FILE}
+
+# 4: Use sed to replace old Links between markers in archive.html. Is moved because read issues:
 sed -e '/<!-- ARCHIVE - START -->/,/<!-- ARCHIVE - END -->/{ 
         /<!-- ARCHIVE - START -->/! { 
             /<!-- ARCHIVE - END -->/! d; 
@@ -37,13 +44,13 @@ sed -e '/<!-- ARCHIVE - START -->/,/<!-- ARCHIVE - END -->/{
     -e 's/<!-- ARCHIVE - END -->/<!-- ARCHIVE - END -->/' \
     archive.html > temp.html
 
-# 4: Move the temporary File back to archive.html:
-mv temp.html archive.html
+# 5: Move the temporary File back to archive.html:
+mv temp.html ${ARCHIVE_FILE}
 
-# 5: CleanUp the Temporary-Links-File:
+# 6: CleanUp the Temporary-Links-File:
 rm temp_links.html
 
-# 6: Update Time Step:
+# 7: Update Time Step:
 sed -i "s|<p>[0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\} - [0-9]\{2\}:[0-9]\{2\} |<p>$(date '+%Y.%m.%d - %H:%M') |g" archive.html
 
 # - UPDATE SITEMAP: ####################################################################################################
