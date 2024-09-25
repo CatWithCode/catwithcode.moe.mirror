@@ -4,5 +4,5 @@ Disallow:
 Allow: /Assets/
 Allow: /Blog/
 Allow: /Feed/
-Allow: /ImageLibraries/
+Allow: /MediaLibraries/
 Sitemap: https://catwithcode.moe/sitemap.xml

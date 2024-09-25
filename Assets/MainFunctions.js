@@ -27,7 +27,7 @@ function WriteHead() {
 function WriteImageLibaryHeader(titel_text) {
     var imageLibaryHeaderCode = '\
         \
-        <h1><a href="/ImageLibraries/ImageLibaries.html" class="cleanText">&nbsp;🔙&nbsp;###TEXT###</a></h1>'
+        <h1><a href="/MediaLibraries/MediaLibraries.html" class="cleanText">&nbsp;🔙&nbsp;###TEXT###</a></h1>'
     
         document.write(imageLibaryHeaderCode.replace("###TEXT###", titel_text));
 }
