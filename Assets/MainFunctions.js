@@ -15,14 +15,16 @@ async function WriteFooter(dateText, usedLicense = "CC BY-NC-ND 4.0") {
 }
 
 // - - User Agent Checker:
-// Variables only of executed because Performance.
+
+// - - Loads ViwerChecker in a way Bots can not load:
 async function creatCheckViewer() {
     document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Page/Header.html');    
 }
 
-
-async function checkViewerType() {
-    // Check if on DNS-Host or localy hosted, if not execute Anti-Bot forwarding:
+// - - Check if on DNS-Host or localy hosted, if not execute Anti-Bot forwarding:
+// Variables only of executed because Performance.
+function checkViewerType() {
+    
     if (!document.location.origin.includes(websiteURL) &&
         !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
         
