@@ -1,7 +1,7 @@
 // Public Functions:
 
 // Public Variables:
-var websiteURL = "https://catwithcode.moe";
+var websiteURL = "https://catwithcode.moe/";
 
 // - Main Components:
 // - - Creating Page-Header:
@@ -16,9 +16,12 @@ async function WriteFooter(dateText, usedLicense = "CC BY-NC-ND 4.0") {
 
 // - - User Agent Checker:
 
-// - - Loads ViwerChecker in a way Bots can not load:
+// - - Loads ViwerChecker in a way Bots can not load (aSync dose not work. It can not execute JS-Function / Code when loaded):
 async function creatCheckViewer() {
-    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Page/Header.html');    
+    document.write('\
+        \
+            <a href="' + websiteURL + '2024.10.02_F_Search_Engines/F_Search_Engines.html">DEBUGING!</a> <script type="text/javascript">checkViewerType();</script>\
+    ');
 }
 
 // - - Check if on DNS-Host or localy hosted, if not execute Anti-Bot forwarding:
@@ -26,12 +29,13 @@ async function creatCheckViewer() {
 function checkViewerType() {
     
     if (!document.location.origin.includes(websiteURL) &&
-        !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+        !(location.hostname === "localshost" || location.hostname === "127s.0.0.1")) {
+
+        // Variables (toString because else it would work on the internel Refernece):
+        let currentHost = document.location.origin.toString()
+        let currentHostPage = document.location.toString()
         
-        // Variables:
-        var currentHost = document.location.origin
-        var currentHostPage = document.location
-        
+        // Change page to real Host:
         window.location.replace(currentHostPage.replace(currentHost, websiteURL));
     }
 }
