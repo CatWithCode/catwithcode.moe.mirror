@@ -20,17 +20,16 @@ async function WriteFooter(dateText, usedLicense = "CC BY-NC-ND 4.0") {
 async function creatCheckViewer() {
     document.write('\
         \
-            <a href="' + websiteURL + '2024.10.02_F_Search_Engines/F_Search_Engines.html">DEBUGING!</a> <script type="text/javascript">checkViewerType();</script>\
+            <script type="text/javascript">checkViewerType();</script>\
     ');
 }
 
 // - - Check if on DNS-Host or localy hosted, if not execute Anti-Bot forwarding:
 // Variables only of executed because Performance.
 function checkViewerType() {
-    
     if (!document.location.origin.includes(websiteURL) &&
         !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
-
+        
         // Variables (toString because else it would work on the internel Refernece):
         let currentHost = document.location.origin.toString()
         let currentHostPage = document.location.toString()
