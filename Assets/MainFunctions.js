@@ -36,6 +36,14 @@ function checkViewerType() {
         
         // Change page to real Host:
         window.location.replace(currentHostPage.replace(currentHost, websiteURL));
+    } else { //IF NOT ON DNS-FIX OR LOCAL HOSTED:
+        // Ger Reference:
+        var div = document.getElementById("viewerChecker");
+
+        // Remove DIV:
+        if (div) {
+            div.remove();
+        }
     }
 }
 
