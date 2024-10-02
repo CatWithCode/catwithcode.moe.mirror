@@ -29,7 +29,7 @@ async function creatCheckViewer() {
 function checkViewerType() {
     
     if (!document.location.origin.includes(websiteURL) &&
-        !(location.hostname === "localshost" || location.hostname === "127s.0.0.1")) {
+        !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
 
         // Variables (toString because else it would work on the internel Refernece):
         let currentHost = document.location.origin.toString()
