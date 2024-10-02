@@ -1,7 +1,7 @@
 // Public Functions:
 
-// Public Variables:
-var websiteURL = "https://catwithcode.moe/";
+// Public Variables (Without slash because replace issue):
+var websiteURL = "https://catwithcode.moe";
 
 // - Main Components:
 // - - Creating Page-Header:
