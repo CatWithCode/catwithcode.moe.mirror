@@ -4,4 +4,7 @@ This is a source code mirror of my website, where I post my daily discoveries an
 # How to Update:
 The "DeployWebsite.sh"-Script should do everything that is needed to update any part of the Website. Just write a new Entry and after executing the Script everything should be linked relatively and statically correctly.
 
+# REDIRECT - WHY AM I HOSTING THE PAGE TWO TIMES:
+TODO
+
 [https://catwithcode.moe/](https://catwithcode.moe/)

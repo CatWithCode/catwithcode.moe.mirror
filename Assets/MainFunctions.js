@@ -1,5 +1,8 @@
 // Public Functions:
 
+// Public Variables:
+var websiteURL = "https://catwithcode.moe";
+
 // - Main Components:
 // - - Creating Page-Header:
 async function WriteHeader() {
@@ -9,6 +12,26 @@ async function WriteHeader() {
 // - - Creating Page-Footer:
 async function WriteFooter(dateText, usedLicense = "CC BY-NC-ND 4.0") {
     document.getElementById("Footer").innerHTML = (await this.aSyncLoadFile('/Assets/BaseFiles/Page/Footer.html')).replace("###DATE_TEXT###", dateText).replace("###LICENSE###", usedLicense);
+}
+
+// - - User Agent Checker:
+// Variables only of executed because Performance.
+async function creatCheckViewer() {
+    document.getElementById("Header").innerHTML = await this.aSyncLoadFile('/Assets/BaseFiles/Page/Header.html');    
+}
+
+
+async function checkViewerType() {
+    // Check if on DNS-Host or localy hosted, if not execute Anti-Bot forwarding:
+    if (!document.location.origin.includes(websiteURL) &&
+        !(location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+        
+        // Variables:
+        var currentHost = document.location.origin
+        var currentHostPage = document.location
+        
+        window.location.replace(currentHostPage.replace(currentHost, websiteURL));
+    }
 }
 
 // - - Write HTML-Head (NOT async because of WebCrawler):
