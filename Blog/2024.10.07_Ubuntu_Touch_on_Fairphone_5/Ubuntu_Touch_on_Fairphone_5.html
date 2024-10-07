@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="/Assets/MainFunctions.js"></script>
+    <script type="text/javascript">WriteHead();</script>
+    <title>CatWithCode - Everything about UbuntuTouch on the Fairphone 5</title>
+  </head>
+  <body align="left">
+    <div id="viewerChecker"> <a href="https://catwithcode.moe/Blog/2024.10.02_F_Search_Engines/F_Search_Engines.html">GITHUB PAGES IS ONLY FOR SEARCH ENGINES! CLICK HERE TO FIND OUT WHY! IF YOU ARE ON CATWITHCODE.MOE ALREADY, YOU MAY BLOCK JS AND THATS WHY YOU SEE THIS. GOOD FOR YOU :).</a> <script type="text/javascript">creatCheckViewer();</script></div>
+
+    <div id="Header"> <a href="/archive.html">NoJS-Header</a> <script type="text/javascript">WriteHeader();</script></div>
+    
+    <h1>Everything about Ubuntu Touch on the Fairphone 5</h1>
+    <p>In this entry I will document everything about using Ubuntu Touch on the Fairphone 5. I independently volunteer as a beta tester.</p>
+    <p>This entry uses the "Everything about Fairphone 5 Modding" entry as a base and is written in the same structure..</p>
+    <p>After almost 10 years, it is nice to see the beautiful UI again. After backing up as much as possible with "Neo Backup" (TWRP still does not allow DATA backups), downloading all the packages (LinageOS, FairphoneOS 13&14 and the UT installer) and making sure the phone was fully charged, I started.</p>
+    <!--HERE NEW ENTRY (COPY, PASTE PLACEHOLDER)-->
+    <hr>
+    <h2><u>What works, what dose not</u>:</h2>
+    <p>A list of stuff I tested with last tested Status and the Tickets if any:</p>
+    <p>✅ WORKS | 🔰 WORKS, BUT STILL TESTING | ➖ NOT TESTED YET | ⭕ ISSUES | ❌ NOT WORKING</p>
+    <ul>
+      <li>✅ Install</li>
+      <li>✅ Setup</li>
+      <li>✅ Working with German SIM-CARD</li>
+      <li>✅ WiFi (With Network enforced Pi-Hole)</li>
+      <li>✅ Camera (Photo, Video, with and without Flash, Switching between cameras)</li>
+      <li>✅ LTE</li>
+      <li>➖ 5G</li>
+      <li>➖ VoLTE</li>
+      <li>➖ GPS</li>
+      <li>➖ Battery Life / Performance / Heat</li>
+      <li>🔰 SMS</li>
+      <li>✅ CALL (2G)</li>
+      <li>✅ FLASH</li>
+      <li>✅ Vibration</li>
+      <li>✅ Screen Brightness (With and without Auto)</li>
+      <li>✅ Proximity</li>
+      <li>✅ Rotation</li>
+      <li>❌ Fingerprint reader (The OS knows it dose not work)</li>
+      <li>⭕ USB-OTG [<a href="https://forums.ubports.com/topic/10469/bug-usb-otg-hard-crashes-phone?_=1728320676279">BUG: USB-OTG Hard Crashes Phone (2.0 WORKS! 3.0+ CABLES CRASH.)</a>]</li>
+      <li>✅ USB-HUB [Keyboard, Mouse and USB-Drive work]</li>
+      <li>✅ USB-AUDIO - Works perfectly... surprisingly.</li>
+      <li>❌ USB-VIDEO [<a href="https://forums.ubports.com/topic/10469/bug-usb-otg-hard-crashes-phone?_=1728320676279">Probably related: "BUG: USB-OTG Hard Crashes Phone"</a>]</li>
+      <li>❌ Waydroid [<a href="https://forums.ubports.com/topic/10468/bug-waydroid-not-working">BUG: Waydroid not working</a>]</li>
+      <li>⭕ NFC [<a href="https://forums.ubports.com/topic/10471/bug-nfc-works-but-no-app-setting-i-found-can-read-anything">BUG: NFC works but no APP / Setting I found can read anything</a>]</li>
+      <li>⭕ Bluetooth [<a href="https://forums.ubports.com/topic/10470/bug-bluetooth-is-working-but-cannot-reliably-connect-to-or-read-nearby-devices">BUG: Bluetooth is working, but cannot reliably connect to or read nearby devices.</a>]</li>
+      <li>✅ Libertine (Tested with Firefox)</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <h2><u>Installation</u>:</h2>
+    <p>I had LinageOS installed, so I flashed the Stock Android 13 Rom (Android 14 was aready out but the installer wants Android 13. It is very importnat to use the right Android Version).</p>
+    <p>I use Arch (btw.) and used the offical UBports Installer. It did all the udev stuff for me and flashed the phone without any issues.</p>
+    <p>I use a very good USB 3.2 cable that came with a SanDisk SSD (I think something like "SanDisk Extreme Portable" or along those lines.). It's short, it's annoying, but it's the only USB-C cable I trust with stuff like this. I hate the inconsstensi with USB-C cables.</p>
+    <p>I had so many issues in the past with OEM cables or even good ones that were out of spec. If you ever have problems with low level flashing, it could be the cable. Try different ones until you find a reliable one.</p>
+    <a href="https://devices.ubuntu-touch.io/installer/">https://devices.ubuntu-touch.io/installer/</a>
+    <hr>
+    <h2>Sources:</h2>
+    <ul>
+      <li><a href="https://devices.ubuntu-touch.io/installer/">https://devices.ubuntu-touch.io/installer/</a></li>
+      <li><a href="https://support.fairphone.com/hc/en-us/articles/18896094650513-Install-Fairphone-OS-manually">https://support.fairphone.com/hc/en-us/articles/18896094650513-Install-Fairphone-OS-manually</a></li>
+      <li><a href="https://github.com/NeoApplications/Neo-Backup">https://github.com/NeoApplications/Neo-Backup</a></li>
+      <li><a href="https://ubports.com/en/blog">https://ubports.com/en/blog</a></li>
+      <li><a href="https://forums.ubports.com/topic/9576/best-way-to-support-porting-checking-status-for-the-fairphone-5/56">https://forums.ubports.com/topic/9576/best-way-to-support-porting-checking-status-for-the-fairphone-5/56</a></li>
+      <li><a href="https://forums.ubports.com/category/126/fairphone-5">https://forums.ubports.com/category/126/fairphone-5</a></li>
+      <li><a href="https://devices.ubuntu-touch.io/device/fp5">https://devices.ubuntu-touch.io/device/fp5</a></li>
+      <li><a href="https://wiki.postmarketos.org/wiki/Fairphone_5_(fairphone-fp5)">https://wiki.postmarketos.org/wiki/Fairphone_5_(fairphone-fp5)</a></li>
+      <li><a href="https://shop.sandisk.com/products/ssd/portable-ssd/portable-ssd-sandisk-extreme-pro-usb-3-2">https://shop.sandisk.com/products/ssd/portable-ssd/portable-ssd-sandisk-extreme-pro-usb-3-2</a></li>
+      <li><a href="https://forums.ubports.com/topic/10468/bug-waydroid-not-working">https://forums.ubports.com/topic/10468/bug-waydroid-not-working</a></li>
+      <li><a href="https://forums.ubports.com/topic/10469/bug-usb-otg-hard-crashes-phone?_=1728320676279">https://forums.ubports.com/topic/10469/bug-usb-otg-hard-crashes-phone?_=1728320676279</a></li>
+      <li><a href="https://forums.ubports.com/topic/10471/bug-nfc-works-but-no-app-setting-i-found-can-read-anything">https://forums.ubports.com/topic/10471/bug-nfc-works-but-no-app-setting-i-found-can-read-anything</a></li>
+      <li><a href="https://forums.ubports.com/topic/10470/bug-bluetooth-is-working-but-cannot-reliably-connect-to-or-read-nearby-devices">https://forums.ubports.com/topic/10470/bug-bluetooth-is-working-but-cannot-reliably-connect-to-or-read-nearby-devices</a></li>
+      <li><a href="">Link</a></li>
+    </ul>
+    <div id="Footer"> <p><b><u>NoJS-Footer (COULD NOT LOAD LICENSE JS-CODE FOR FOOTER! THE LICENSE IS IN THE HTML CODE!)</u></b></p><script type="text/javascript">WriteFooter('2024.10.07 - 21:00');</script></div>
+  </body>
+</html>
